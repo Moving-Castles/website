@@ -42,17 +42,22 @@
   <ul class="hidden sm:flex gap-4">
     <li>
       <a href="#projects" class:underline={$page.url.hash === '#projects'}>
-        Projects        
+        Projects
+      </a>
+    </li>
+    <li>
+      <a href="#writings" class:underline={$page.url.hash === '#writings'}>
+        Writings 
       </a>
     </li>
     <li>
       <a href="#resources" class:underline={$page.url.hash === '#resources'}>
-        Resources        
+        Resources
       </a>
     </li>
     <li>
       <a href="#about" class:underline={$page.url.hash === '#about'}>
-        About       
+        About
       </a>
     </li>
   </ul>
@@ -64,17 +69,22 @@
     <ul class="gap-4">
       <li>
         <a on:click={close} href="#projects" class:underline={$page.url.hash === '#projects'}>
-          Projects        
+          Projects
+        </a>
+      </li>
+      <li>
+        <a on:click={close} href="#writings" class:underline={$page.url.hash === '#writings'}>
+          Writings
         </a>
       </li>
       <li>
         <a on:click={close} href="#resources" class:underline={$page.url.hash === '#resources'}>
-          Resources        
+          Resources
         </a>
       </li>
       <li>
         <a on:click={close} href="#about" class:underline={$page.url.hash === '#about'}>
-          About       
+          About
         </a>
       </li>
     </ul>
