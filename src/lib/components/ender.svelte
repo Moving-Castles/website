@@ -6,12 +6,9 @@
   import { onMount, onDestroy } from "svelte"
 	export let post: Post;
 
-	import { mask } from '$lib/transitions';
-
 	let tick = 0;
   let interval
 
-	const urls = ['/masks/1.jpg', '/masks/4.jpeg', '/masks/5.png', '/masks/6.png', '/masks/7.png'];
   const ticker = () => tick++
 
   onMount(() => {
@@ -21,7 +18,7 @@
   onDestroy(() => clearInterval(interval))
 </script>
 
-<div class="card">
+<a href="/#writings" class="card">
 	{#if post.mainImage}
     <div class="h-[50vh]" style:background-image="url({urlFor(post.mainImage).url()})">
 
@@ -29,24 +26,10 @@
 	{:else}
 		<div class="" />
 	{/if}
-
-	<div class="p-8 text-xl">
-    <div class="flex">
-      <h1 class="text-[100px] font-thin pr-4 pt-8">*</h1>
-      <div>
-        <h3 class="">
-          {post.title}
-        </h3>
-        <p class="">
-          {formatDate(post._createdAt)}
-        </p>
-      </div>
-    </div>
-	</div>
-</div>
+  </a>
 
 <style>
   .card {
-    filter: grayscale(1) contrast(2);
+    filter: invert(1) grayscale(1) ;
   }
 </style>

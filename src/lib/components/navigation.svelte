@@ -21,8 +21,8 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/svelte-hamburgers@3/dist/css/types/collapse.css" />
 </svelte:head> -->
 
-<nav class="flex justify-between fixed w-full top-0 py-4 px-8 text-xl">
-  <a href="/">
+<nav class="flex justify-between fixed w-full top-0 py-4 px-8 z-10">
+  <a data-sveltekit-noscroll href="/">
     <h1>
       Moving Castles
     </h1>
@@ -41,22 +41,22 @@
 
   <ul class="hidden sm:flex gap-4">
     <li>
-      <a href="#projects" class:underline={$page.url.hash === '#projects'}>
+      <a href="/#projects" data-sveltekit-noscroll class:underline={$page.url.hash === '#projects'}>
         Projects
       </a>
     </li>
     <li>
-      <a href="#writings" class:underline={$page.url.hash === '#writings'}>
+      <a href="/#writings" data-sveltekit-noscroll class:underline={$page.url.hash === '#writings'}>
         Writings 
       </a>
     </li>
     <li>
-      <a href="#resources" class:underline={$page.url.hash === '#resources'}>
+      <a href="/#resources" data-sveltekit-noscroll class:underline={$page.url.hash === '#resources'}>
         Resources
       </a>
     </li>
     <li>
-      <a href="#about" class:underline={$page.url.hash === '#about'}>
+      <a href="/#about" data-sveltekit-noscroll class:underline={$page.url.hash === '#about'}>
         About
       </a>
     </li>

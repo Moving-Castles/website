@@ -1,6 +1,7 @@
 <script lang="ts">
   import { page } from "$app/stores"
   import Hero from "$lib/components/hero.svelte"
+  import Footer from "$lib/components/footer.svelte"
   export let data
 
   $: if ($page.url.hash) {
@@ -8,14 +9,14 @@
 
     const target = document.querySelector($page.url.hash)
 
-    parent?.scrollTo({ top: target?.getBoundingClientRect().top, behavior: 'smooth' })
+    // parent?.scrollTo({ top: target?.getBoundingClientRect().top, behavior: 'smooth' })
     // console.log(target?.getBoundingClientRect().top)
     // console.log(target)
   }
 </script>
 
 
-<div class="px-8 bg-red-500">
+<div class="px-8 bg-cornell">
   <Hero />
 
   <div id="projects" class="pt-24">
@@ -42,10 +43,10 @@
       <a href="/writing/{post.slug.current}" class="grid grid-cols-3 hover:bg-black hover:text-white grid-rows-6 sm:flex aspect-square sm:aspect-auto sm:justify-between p-4 gap-4 text-xl border border-black">
         <div class="col-span-3 w-full sm:w-2/3 row-span-5">{post.title}</div>
         <div class="flex flex-col justify-end sm:justify-start col-span-2 sm:w-1/4 h-auto ">
-          <a class="" >Github</a>
+          <a class="" href="https://github.com/Moving-Castles">Github</a>
         </div>
         <div class="flex sm:w-1/3 flex-row sm:items-start items-end">
-          <a class="w-full text-right" href="/more">Read more</a>
+          <a class="w-full text-right" href="/writing/{post.slug.current}">Read more</a>
         </div>
       </a>
     {/each}
@@ -121,15 +122,7 @@
       </button>
     </div>
   </div>
-</div>
 
-<!-- <div class="h-screen scroll-pt-4 snap-start">
-  <div id="writing" class="pt-12">
-    writing
-  </div>
+  <Footer />
+
 </div>
-<div class="h-screen scroll-pt-4 snap-start">
-  <div id="about" class="pt-12">
-    about
-  </div>
-</div> -->

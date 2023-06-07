@@ -5,6 +5,7 @@
 	import type { PageData } from './$types';
   import Seo from "$lib/components/seo.svelte"
   import Card from "$lib/components/card.svelte"
+  import Ender from "$lib/components/ender.svelte"
 
 	export let data: PageData;
 
@@ -14,23 +15,27 @@
 
 <Seo />
 
-<div class="min-h-screen bg-green-400">
-  {#if data.mainImage}
-    <!-- <Card post={data} /> -->
-  {:else}
-    <div class="w-screen h-[50vh]" />
-  {/if}
+<div class="min-h-screen bg-picton">
+  <div class="mix-blend-multiply">
+    {#if data.mainImage}
+      <Card post={data} />
+    {:else}
+      <div class="w-screen h-[50vh]" />
+    {/if}
+  </div>
   
-  <section class="px-8 pt-24">
-    <div class="post__container">
-      <h1 class="post__title">{data.title}</h1>
-      <p class="post__excerpt">{data.excerpt}</p>
-      <p class="post__date">
-        {formatDate(data._createdAt)}
-      </p>
-      <div class="post__content">
-        <PortableText value={data.body} />
-      </div>
-    </div>
+  <section class="content px-8 pb-24 max-w-screen-sm">
+    <PortableText value={data.body} />
   </section>
+
+  <div class="mix-blend-multiply">
+    <Ender post={data} />
+  </div>
+
 </div>
+
+<style>
+  .content :global(p) {
+    @apply mb-4;
+  }
+</style>

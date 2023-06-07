@@ -162,7 +162,8 @@ export function mask (node, {
           return diamond(t, feather)
         case ('image'):
           // THis makes SiT Very loOpy
-          t = Math.random() < 0.5 ? t : lerp(1, 0, t)
+          // t = Math.random() < 0.5 ? t : lerp(1, 0, t)
+          t = lerp(1, 0, t)
           return image(t, url)
       }
     }

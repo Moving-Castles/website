@@ -22,7 +22,5 @@
 		<Navigation />
 
 		<slot />
-
-		<Footer />
 	</div>
 {/key}

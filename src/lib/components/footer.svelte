@@ -1,4 +1,4 @@
-<footer class="flex justify-between py-8 px-8">
+<footer class="flex justify-between py-8">
   <p>
     2023 Copyright
   </p>
