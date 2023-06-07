@@ -163,7 +163,7 @@ export function mask (node, {
         case ('image'):
           // THis makes SiT Very loOpy
           // t = Math.random() < 0.5 ? t : lerp(1, 0, t)
-          t = lerp(1, 0, t)
+          // t = lerp(1, 0, t)
           return image(t, url)
       }
     }
