@@ -12,6 +12,7 @@
 <style lang="scss">
 	footer {
 		display: flex;
+		text-align: left;
 		flex-direction: column;
 		padding: var(--default-padding);
 	}
