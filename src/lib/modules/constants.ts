@@ -3,22 +3,22 @@ import type { MenuItem } from "./types";
 export const MENU_ITEMS: MenuItem[] = [
     {
         name: 'Projects',
-        href: '/#projects',
+        href: '/project',
         hash: '#projects'
     },
     {
-        name: 'Writings',
-        href: '/#writings',
+        name: 'Writing',
+        href: '/writing',
         hash: '#writings'
     },
     {
         name: 'Resources',
-        href: '/#resources',
+        href: '/resource',
         hash: '#resources'
     },
     {
         name: 'About',
-        href: '/#about',
+        href: '/about',
         hash: '#about'
     }
 ];
