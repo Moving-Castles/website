@@ -1,41 +1,31 @@
 <script lang="ts">
-	import { PortableText } from '@portabletext/svelte';
-	import { formatDate } from '$lib/sanity';
-	import { urlFor } from '$lib/sanity/image';
 	import type { PageData } from './$types';
-  import Seo from "$lib/components/seo.svelte"
-  import Card from "$lib/components/card.svelte"
-  import Ender from "$lib/components/ender.svelte"
+	import SEO from '$lib/components/SEO.svelte';
+	import Content from '$lib/components/page/Content.svelte';
+	import FeaturedMedia from '$lib/components/page/FeaturedMedia.svelte';
+	import Links from '$lib/components/page/Links.svelte';
+	import Media from '$lib/components/page/Media.svelte';
 
 	export let data: PageData;
+	const { post } = data;
 
-  console.log(Object.keys(data))
-
+	console.log(post);
 </script>
 
-<Seo />
+<SEO />
 
-<div class="min-h-screen bg-picton">
-  <div class="mix-blend-multiply">
-    {#if data.mainImage}
-      <Card post={data} />
-    {:else}
-      <div class="w-screen h-[50vh]" />
-    {/if}
-  </div>
-  
-  <section class="content px-8 pb-24 max-w-screen-sm">
-    <PortableText value={data.body} />
-  </section>
-
-  <div class="mix-blend-multiply">
-    <Ender post={data} />
-  </div>
-
+<div>
+	<h1>{post.title}</h1>
+	<div class="featured-media">
+		<FeaturedMedia {post} />
+	</div>
+	<div class="media">
+		<Media {post} />
+	</div>
+	<div class="content">
+		<Content {post} />
+	</div>
+	<div class="links">
+		<Links {post} />
+	</div>
 </div>
-
-<style>
-  .content :global(p) {
-    @apply mb-4;
-  }
-</style>
