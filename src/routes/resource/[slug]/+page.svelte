@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import SEO from '$lib/components/SEO.svelte';
 	import Content from '$lib/components/page/Content.svelte';
 	import FeaturedMedia from '$lib/components/page/FeaturedMedia.svelte';
 	import Links from '$lib/components/page/Links.svelte';
@@ -11,8 +10,6 @@
 
 	console.log(post);
 </script>
-
-<SEO />
 
 <div>
 	<h1>{post.title}</h1>
