@@ -1,22 +1,20 @@
-<footer class="flex justify-between py-8">
-  <p>
-    2023 Copyright
-  </p>
-  <div class="flex gap-4">
-    <a href="/team">
-      Team
-    </a>
-    <a href="/writing">
-      Writing
-    </a>
-    <a href="/team">
-      Network
-    </a>
-    <a href="/team">
-      Contact
-    </a>
-    <a href="/imprint">
-      Impressum
-    </a>
-  </div>
+<footer>
+	<p>2023 Copyright</p>
+	<div>
+		<a href="/team">Team</a>
+		<a href="/writing">Writing</a>
+		<a href="/team">Network</a>
+		<a href="/contact">Contact</a>
+		<a href="/imprint">Impressum</a>
+	</div>
 </footer>
+
+<style lang="scss">
+	footer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: var(--default-padding);
+	}
+</style>

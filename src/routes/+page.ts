@@ -1,5 +1,15 @@
-import type { PageLoad } from './$types';
+import { loadData } from "$lib/modules/sanity"
 
-export const load = (async ({ parent }) => {
-  return {...await parent()}
-}) satisfies PageLoad
+export async function load() {
+  const about = await loadData("*[_id == 'about'][0]", {})
+  const projects = await loadData("*[_type == 'project']", {})
+  const writings = await loadData("*[_type == 'writing']", {})
+  const resources = await loadData("*[_type == 'resource']", {})
+
+  return {
+    about,
+    projects,
+    writings,
+    resources
+  };
+}

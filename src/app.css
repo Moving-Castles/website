@@ -1,9 +1,50 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-@layer base {
-  html {
-    scroll-behavior: smooth;
-  }
+:root {
+  /* Colors */
+  --black: rgba(20,20,20,1);
+  --background-color: rgb(10, 10, 10);
+  --foreground-color: rgb(255, 255, 255);
+
+  /* 'GT Pressura Mono' */
+  /* Fonts */
+  --font-family: 'GT Pressura Mono', 'Autoscape TTTrial', 'Riforma Trial', 'GT Pressura Mono', 'Replica Mono Trial', "helvetica neue", helvetica, arial, sans-serif;
+
+  /* Font size */
+  --font-size-normal: 16px;
+
+  /* Sizing */
+  --default-padding: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  color: var(--foreground-color);
+  font-family: var(--font-family);
+  font-size: var(--font-size-normal);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overscroll-behavior-y: none;
+  background: var(--background-color);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-size: inherit;
+  font-weight: normal;
 }
