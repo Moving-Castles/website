@@ -34,6 +34,7 @@
 		"@sanity/block-content-to-html": "^2.0.0",
 		"@sanity/client": "^6.4.12",
 		"@sanity/image-url": "^1.0.2",
-		"lodash": "^4.17.21"
+		"lodash": "^4.17.21",
+		"svelte-hamburgers": "^4.1.1"
 	}
 }

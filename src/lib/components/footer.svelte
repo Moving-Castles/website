@@ -12,8 +12,8 @@
 <style lang="scss">
 	footer {
 		display: flex;
-		text-align: left;
+		text-align: center;
 		flex-direction: column;
-		padding: var(--default-padding);
+		padding: 40px;
 	}
 </style>

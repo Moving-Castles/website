@@ -12,10 +12,6 @@
 
 <style lang="scss">
 	main {
-		width: 100%;
-		background: var(--background-color);
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+		// line-height: 0;
 	}
 </style>

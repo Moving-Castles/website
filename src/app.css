@@ -1,13 +1,17 @@
 
 :root {
   /* Colors */
-  --black: rgba(20,20,20,1);
-  --background-color: rgb(10, 10, 10);
-  --foreground-color: rgb(255, 255, 255);
+  --black: rgba(10,10,10,1);
+  --grey: rgba(193, 193, 193, 1);
+  --orange: rgba(255, 69, 0, 1);
+  --background-color: var( --black);
+  --foreground-color: var(--grey);
+  --accent-color: var(--orange);
+  --background-accent: rgba(20,20,20,1);
 
-  /* 'GT Pressura Mono' */
+
   /* Fonts */
-  --font-family: 'GT Pressura Mono', 'Autoscape TTTrial', 'Riforma Trial', 'GT Pressura Mono', 'Replica Mono Trial', "helvetica neue", helvetica, arial, sans-serif;
+  --font-family: 'GT Pressura Mono', 'Autoscape TTTrial',  'Riforma Trial', 'GT Pressura Mono', 'Replica Mono Trial', "helvetica neue", helvetica, arial, sans-serif;
 
   /* Font size */
   --font-size-normal: 16px;

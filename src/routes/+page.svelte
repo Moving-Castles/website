@@ -10,20 +10,16 @@
 	console.log(data);
 </script>
 
-<div class="frontpage">
-	<Hero {about} />
-	<Projects {projects} />
-	<Writings {writings} />
-	<Resources {resources} />
-	<About {about} />
-</div>
+<Hero {about} />
+<Projects {projects} />
+<Writings {writings} />
+<Resources {resources} />
+<About {about} />
 
 <style lang="scss">
 	.frontpage {
 		min-height: 100vh;
-		width: 900px;
-		margin-right: 0;
-		margin-left: 0;
-		padding: var(--default-padding);
+		// padding: var(--default-padding);
+		padding: 0;
 	}
 </style>

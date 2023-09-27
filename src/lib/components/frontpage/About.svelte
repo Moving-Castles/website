@@ -1,13 +1,41 @@
 <script lang="ts">
+	import SectionHead from '$lib/components/frontpage/SectionHead.svelte';
 	import { renderBlockText } from '$lib/modules/sanity';
 	export let about: any;
 </script>
 
 <div id="about">
-	<h3>About</h3>
+	<SectionHead>About</SectionHead>
 	{#if about.content}
-		<div>
-			<p>{@html renderBlockText(about.content.content)}</p>
+		<div class="about">
+			<div class="column left" />
+			<div class="column right">
+				<p>{@html renderBlockText(about.content.content)}</p>
+			</div>
 		</div>
 	{/if}
 </div>
+
+<style lang="scss">
+	.about {
+		display: block;
+		height: 50vh;
+		display: flex;
+
+		.column {
+			width: 50%;
+
+			&.left {
+				// background: radial-gradient(circle, red, orangered);
+				// background: var(--background-accent);
+			}
+
+			&.right {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 20px;
+			}
+		}
+	}
+</style>

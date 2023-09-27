@@ -6,3 +6,13 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'GT Pressura Mono';
+    src: url('./gt-pressura/GTPressuraMono.woff2') format('woff2'),
+        url('./gt-pressura/GTPressuraMono.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
