@@ -17,9 +17,6 @@ dependencies:
   '@sanity/image-url':
     specifier: ^1.0.2
     version: 1.0.2
-  hls.js:
-    specifier: ^1.4.12
-    version: 1.4.12
   lodash:
     specifier: ^4.17.21
     version: 4.17.21
