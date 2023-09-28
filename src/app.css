@@ -52,3 +52,8 @@ h1, h2, h3 {
   font-size: inherit;
   font-weight: normal;
 }
+
+mux-player {
+  /* Hide all controls at once */
+  --controls: none;
+}

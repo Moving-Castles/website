@@ -28,13 +28,24 @@
 			width: 50%;
 
 			&.left {
-				// background: radial-gradient(circle, red, orangered);
-				// background: var(--background-accent);
+				display: flex;
+				justify-content: center;
+				align-items: center;
 
 				:global(img) {
 					width: 80%;
 					max-height: 80%;
 					object-fit: cover;
+					border-radius: 20px;
+				}
+
+				:global(.video-container) {
+					width: 80%;
+					max-height: 80%;
+					object-fit: cover;
+					// border-radius: 20px;
+					overflow: hidden;
+					pointer-events: none;
 				}
 			}
 
