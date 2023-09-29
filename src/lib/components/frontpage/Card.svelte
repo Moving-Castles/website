@@ -16,7 +16,8 @@
 <style lang="scss">
 	.card {
 		display: block;
-		height: 50vh;
+		height: 70vh;
+		max-height: 800px;
 		display: flex;
 		background: transparent;
 
