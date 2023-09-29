@@ -1,12 +1,14 @@
 <script lang="ts">
 	import SectionHead from '$lib/components/frontpage/SectionHead.svelte';
 	import Card from '$lib/components/frontpage/Card.svelte';
-	export let projects: any[] = [];
+	export let posts: any[] = [];
+	export let title = '';
+	export let category = '';
 </script>
 
 <div id="projects">
-	<SectionHead>Projects</SectionHead>
-	{#each projects as post}
-		<Card {post} category="project" />
+	<SectionHead>{title}</SectionHead>
+	{#each posts as post}
+		<Card {post} {category} />
 	{/each}
 </div>

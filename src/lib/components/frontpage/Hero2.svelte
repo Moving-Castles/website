@@ -9,16 +9,9 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
-<header on:click={scrollToProjects}>
+<header>
 	<div class="column left">
 		<img src="/core.png" alt="Core" />
-	</div>
-	<div class="column right">
-		{#if about.tagline}
-			<div class="tag-line">
-				{about.tagline}
-			</div>
-		{/if}
 	</div>
 </header>
 
@@ -31,11 +24,11 @@
 		margin: 0;
 		display: flex;
 		user-select: none;
-		cursor: pointer;
+		// cursor: pointer;
 
 		.column {
 			display: block;
-			width: 50%;
+			width: 100%;
 			height: 100%;
 			display: flex;
 			justify-content: center;
@@ -51,8 +44,7 @@
 
 				img {
 					// mix-blend-mode: screen;
-					width: 60%;
-					height: auto;
+					height: 80%;
 					animation: bobUpAndDown 2s infinite; /* 1s is the duration, adjust as needed */
 				}
 			}

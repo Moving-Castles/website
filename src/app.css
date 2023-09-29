@@ -2,16 +2,20 @@
 :root {
   /* Colors */
   --black: rgba(10,10,10,1);
+  --blackish: rgba(30,30,30,1);
   --grey: rgba(193, 193, 193, 1);
   --orange: rgba(255, 69, 0, 1);
   --background-color: var( --black);
   --foreground-color: var(--grey);
   --accent-color: var(--orange);
+  --hover-color: var(--blackish);
   --background-accent: rgba(20,20,20,1);
 
 
   /* Fonts */
   --font-family: 'GT Pressura Mono', 'Autoscape TTTrial',  'Riforma Trial', 'GT Pressura Mono', 'Replica Mono Trial', "helvetica neue", helvetica, arial, sans-serif;
+  --display-family: 'Rock Salt', cursive;
+
 
   /* Font size */
   --font-size-normal: 16px;

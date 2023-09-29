@@ -5,6 +5,7 @@
 	import Writings from '$lib/components/frontpage/Writings.svelte';
 	import Resources from '$lib/components/frontpage/Resources.svelte';
 	import About from '$lib/components/frontpage/About.svelte';
+	import Hero2 from '$lib/components/frontpage/Hero2.svelte';
 	export let data;
 	const { about, projects, writings, resources } = data;
 	console.log(data);
@@ -15,6 +16,7 @@
 <Writings {writings} />
 <Resources {resources} />
 <About {about} />
+<Hero2 {about} />
 
 <style lang="scss">
 	.frontpage {

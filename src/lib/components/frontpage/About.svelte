@@ -10,7 +10,7 @@
 		<div class="about">
 			<div class="column left" />
 			<div class="column right">
-				<p>{@html renderBlockText(about.content.content)}</p>
+				{@html renderBlockText(about.content.content)}
 			</div>
 		</div>
 	{/if}
@@ -32,8 +32,8 @@
 
 			&.right {
 				display: flex;
-				justify-content: center;
-				align-items: center;
+				// justify-content: center;
+				// align-items: center;
 				padding: 20px;
 			}
 		}
