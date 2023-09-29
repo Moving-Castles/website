@@ -21,7 +21,7 @@
 		type="squeeze"
 		--layer-width="30px"
 		--layer-height="2px"
-		--color="rgba(193, 193, 193, 1)"
+		--color={open ? 'rgba(10,10,10,1)' : 'rgba(193, 193, 193, 12)'}
 		bind:open
 	/>
 </nav>
@@ -50,6 +50,7 @@
 		top: 10px;
 		right: 10px;
 		z-index: 1000;
+		z-index: var(--hamburger-z);
 	}
 
 	menu {
@@ -62,6 +63,9 @@
 		width: 50%;
 		color: var(--background-color);
 		background: var(--foreground-color);
+		z-index: var(--navigation-z);
+		font-family: var(--display-family);
+		font-size: 2em;
 
 		display: flex;
 		justify-content: center;
@@ -69,6 +73,12 @@
 
 		.inner {
 			text-align: center;
+
+			a {
+				&:hover {
+					color: var(--accent-color);
+				}
+			}
 		}
 	}
 </style>

@@ -11,7 +11,6 @@
   --hover-color: var(--blackish);
   --background-accent: rgba(20,20,20,1);
 
-
   /* Fonts */
   --font-family: 'GT Pressura Mono', 'Autoscape TTTrial',  'Riforma Trial', 'GT Pressura Mono', 'Replica Mono Trial', "helvetica neue", helvetica, arial, sans-serif;
   --display-family: 'Rock Salt', cursive;
@@ -22,6 +21,10 @@
 
   /* Sizing */
   --default-padding: 10px;
+
+  /* z */
+  --hamburger-z: 1001;
+  --navigation-z: 1000;
 }
 
 * {
