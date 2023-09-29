@@ -27,7 +27,7 @@
 </nav>
 
 {#if open}
-	<menu>
+	<menu in:slide={{ duration: 200 }}>
 		<div class="inner">
 			{#each MENU_ITEMS as item}
 				<div>
@@ -65,7 +65,8 @@
 		background: var(--foreground-color);
 		z-index: var(--navigation-z);
 		font-family: var(--display-family);
-		font-size: 2em;
+		font-size: 3em;
+		line-height: 1.3em;
 
 		display: flex;
 		justify-content: center;

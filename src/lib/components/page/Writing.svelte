@@ -7,14 +7,6 @@
 </script>
 
 <div class="container">
-	<div class="column left">
-		<div class="featured-media">
-			<FeaturedMedia {post} />
-			<div class="media">
-				<Media {post} />
-			</div>
-		</div>
-	</div>
 	<div class="column right">
 		<div>{post.title}</div>
 		<div class="content">
@@ -32,6 +24,8 @@
 		display: flex;
 		background: transparent;
 		padding-top: 100px;
+		justify-content: center;
+		padding-bottom: 200px;
 
 		.column {
 			width: 50%;
@@ -43,6 +37,7 @@
 
 				:global(img) {
 					width: 80%;
+					max-width: 400px;
 					max-height: 80%;
 					object-fit: cover;
 					border-radius: 10px;
