@@ -3,12 +3,15 @@
 	import FeaturedMedia from '$lib/components/page/FeaturedMedia.svelte';
 	import Links from '$lib/components/page/Links.svelte';
 	import Media from '$lib/components/page/Media.svelte';
+	import { renderBlockText } from '$lib/modules/sanity';
 	export let post: any;
 </script>
 
 <div class="container">
-	<div class="column right">
+	<div class="column">
+		<div>{post.publicationDate ?? ''}</div>
 		<div>{post.title}</div>
+		<div>{@html renderBlockText(post.byline?.content ?? [])}</div>
 		<div class="content">
 			<Content {post} />
 		</div>
@@ -28,36 +31,7 @@
 		padding-bottom: 200px;
 
 		.column {
-			width: 50%;
-
-			&.left {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-
-				:global(img) {
-					width: 80%;
-					max-width: 400px;
-					max-height: 80%;
-					object-fit: cover;
-					border-radius: 10px;
-				}
-
-				:global(.video-container) {
-					width: 80%;
-					max-height: 80%;
-					object-fit: cover;
-					// border-radius: 20px;
-					overflow: hidden;
-					pointer-events: none;
-					border-radius: 10px;
-				}
-			}
-
-			&.right {
-				padding-left: 20px;
-				padding-right: 20px;
-			}
+			width: 80ch;
 		}
 	}
 </style>

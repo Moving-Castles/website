@@ -58,6 +58,7 @@ const serializers = {
             if (style === "blockquote") return h("blockquote", {}, props.children)
             if (style === "h2") return h("h2", {}, props.children)
             if (style === "h3") return h("h3", {}, props.children)
+            if (style === "hr") return h("hr", {}, [])
             return h("p", { className: style }, props.children)
         }
     },

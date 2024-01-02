@@ -15,7 +15,7 @@
 	</div>
 {:else if post.featuredImage}
 	<img
-		src={urlFor(post.featuredImage).width(800).height(600).auto('format').quality(100).url()}
+		src={urlFor(post.featuredImage).width(1200).height(1200).auto('format').quality(100).url()}
 		alt={post.title}
 	/>
 {/if}

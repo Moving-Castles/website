@@ -8,15 +8,15 @@
 	<div class="column left">
 		<FeaturedMedia {post} />
 	</div>
-	<div class="column right">
+	<!-- <div class="column right">
 		<div>{post.title}</div>
-	</div>
+	</div> -->
 </a>
 
 <style lang="scss">
 	.card {
 		display: block;
-		height: 70vh;
+		height: 100vh;
 		max-height: 800px;
 		display: flex;
 		background: transparent;
@@ -26,7 +26,7 @@
 		}
 
 		.column {
-			width: 50%;
+			width: 100%;
 
 			&.left {
 				display: flex;
@@ -34,10 +34,9 @@
 				align-items: center;
 
 				:global(img) {
-					width: 80%;
-					max-height: 80%;
+					width: 100%;
+					max-height: 100%;
 					object-fit: cover;
-					border-radius: 10px;
 				}
 
 				:global(.video-container) {

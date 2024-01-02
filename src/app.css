@@ -64,3 +64,25 @@ mux-player {
   /* Hide all controls at once */
   --controls: none;
 }
+
+img { 
+  max-width:100%;
+}
+
+.content h1, h2, h3 {
+  font-size: 2em;
+}
+
+.content a {
+  text-decoration: underline;
+  text-decoration-color: yellow;
+}
+
+.content hr {
+  border: 1px solid grey;
+  margin: 1em 0;
+}
+
+figure {
+  margin: 0;
+}

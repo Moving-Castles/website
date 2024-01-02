@@ -1,6 +1,6 @@
 <script lang="ts">
 	// import { page } from '$app/stores';
-	import Hero from '$lib/components/frontpage/Hero.svelte';
+	import Hero3 from '$lib/components/frontpage/Hero3.svelte';
 	import Projects from '$lib/components/frontpage/Projects.svelte';
 	import Writings from '$lib/components/frontpage/Writings.svelte';
 	import Resources from '$lib/components/frontpage/Resources.svelte';
@@ -11,11 +11,22 @@
 	console.log(data);
 </script>
 
-<Hero {about} />
-<Projects {projects} />
-<Writings {writings} />
-<Resources {resources} />
-<About {about} />
+<Hero3 {about} />
+
+<div class="container">
+	<div class="projects list">
+		<Projects {projects} />
+	</div>
+	<div class="writings list">
+		<Writings {writings} />
+	</div>
+	<div class="resources list">
+		<Resources {resources} />
+	</div>
+	<div class="about list">
+		<About {about} />
+	</div>
+</div>
 <Hero2 {about} />
 
 <style lang="scss">
@@ -23,5 +34,13 @@
 		min-height: 100vh;
 		// padding: var(--default-padding);
 		padding: 0;
+	}
+
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+		.list {
+			width: 100%;
+		}
 	}
 </style>
