@@ -1,7 +1,8 @@
 <script lang="ts">
 	import SectionHead from '$lib/components/frontpage/SectionHead.svelte';
 	import Card from '$lib/components/frontpage/Card.svelte';
-	export let posts: any[] = [];
+	import type { Post, Project } from '$lib/modules/types';
+	export let posts: Post[] | Project[] = [];
 	export let title = '';
 	export let category = '';
 </script>

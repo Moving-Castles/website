@@ -2,12 +2,12 @@
 	// import { page } from '$app/stores';
 	import Hero3 from '$lib/components/frontpage/Hero3.svelte';
 	import Projects from '$lib/components/frontpage/Projects.svelte';
-	import Writings from '$lib/components/frontpage/Writings.svelte';
-	import Resources from '$lib/components/frontpage/Resources.svelte';
+	import Posts from '$lib/components/frontpage/Posts.svelte';
 	import About from '$lib/components/frontpage/About.svelte';
 	import Hero2 from '$lib/components/frontpage/Hero2.svelte';
 	export let data;
-	const { about, projects, writings, resources } = data;
+	const { about, projects, posts } = data;
+
 	console.log(data);
 </script>
 
@@ -18,10 +18,7 @@
 		<Projects {projects} />
 	</div>
 	<div class="writings list">
-		<Writings {writings} />
-	</div>
-	<div class="resources list">
-		<Resources {resources} />
+		<Posts {posts} />
 	</div>
 	<div class="about list">
 		<About {about} />
@@ -32,7 +29,6 @@
 <style lang="scss">
 	.frontpage {
 		min-height: 100vh;
-		// padding: var(--default-padding);
 		padding: 0;
 	}
 

@@ -1,7 +1,8 @@
 <script lang="ts">
 	import SectionHead from '$lib/components/frontpage/SectionHead.svelte';
 	import { renderBlockText } from '$lib/modules/sanity';
-	export let about: any;
+	import type { About } from '$lib/modules/types';
+	export let about: About;
 </script>
 
 <div id="about">

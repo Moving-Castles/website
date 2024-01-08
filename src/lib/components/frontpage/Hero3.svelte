@@ -1,5 +1,7 @@
 <script lang="ts">
-	export let about: any;
+	import type { About } from '$lib/modules/types';
+
+	export let about: About;
 	const scrollToProjects = () => {
 		const projectsEl = document.getElementById('projects');
 		if (!projectsEl) return;

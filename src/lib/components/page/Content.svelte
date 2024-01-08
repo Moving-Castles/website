@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { renderBlockText } from '$lib/modules/sanity';
-	export let post: any;
+	import type { Post, About, Project } from '$lib/modules/types';
+	export let post: Post | About | Project;
 </script>
 
 {#if post.content}

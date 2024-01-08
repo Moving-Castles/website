@@ -4,7 +4,8 @@
 	import Links from '$lib/components/page/Links.svelte';
 	import Media from '$lib/components/page/Media.svelte';
 	import { renderBlockText } from '$lib/modules/sanity';
-	export let post: any;
+	import type { Post } from '$lib/modules/types';
+	export let post: Post;
 </script>
 
 <div class="container">

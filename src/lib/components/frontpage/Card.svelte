@@ -1,10 +1,11 @@
 <script lang="ts">
 	import FeaturedMedia from '../page/FeaturedMedia.svelte';
-	export let post: any;
+	import type { Post, Project } from '$lib/modules/types';
+	export let post: Post | Project;
 	export let category: string;
 </script>
 
-<a class="card" href="/{category}/{post.slug.current}">
+<a class="card" href="/post/{post.slug.current}">
 	<div class="column left">
 		<FeaturedMedia {post} />
 	</div>

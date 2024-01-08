@@ -3,7 +3,8 @@
 	import FeaturedMedia from '$lib/components/page/FeaturedMedia.svelte';
 	import Links from '$lib/components/page/Links.svelte';
 	import Media from '$lib/components/page/Media.svelte';
-	export let post: any;
+	import type { Project } from '$lib/modules/types';
+	export let post: Project;
 </script>
 
 <div class="container">

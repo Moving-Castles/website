@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { urlFor } from '$lib/modules/sanity';
+	import type { Post, About, Project } from '$lib/modules/types';
 
-	export let post: any;
+	export let post: Post | About | Project;
 
 	onMount(async () => {
 		await import('@mux/mux-player');

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Content from '$lib/components/page/Content.svelte';
-	export let post: any;
+	import type { About } from '$lib/modules/types';
+	export let post: About;
 </script>
 
 <div class="container">

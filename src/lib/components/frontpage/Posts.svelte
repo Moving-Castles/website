@@ -1,12 +1,13 @@
 <script lang="ts">
 	import SectionHead from '$lib/components/frontpage/SectionHead.svelte';
 	import Card from '$lib/components/frontpage/Card.svelte';
-	export let writings: any[] = [];
+	import type { Post } from '$lib/modules/types';
+	export let posts: Post[] = [];
 </script>
 
 <div id="writings">
-	<SectionHead>Writings</SectionHead>
-	{#each writings as post}
-		<Card {post} category="writing" />
+	<SectionHead>Posts</SectionHead>
+	{#each posts as post}
+		<Card {post} category="posts" />
 	{/each}
 </div>

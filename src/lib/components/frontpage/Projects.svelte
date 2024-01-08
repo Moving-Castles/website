@@ -1,7 +1,8 @@
 <script lang="ts">
 	import SectionHead from '$lib/components/frontpage/SectionHead.svelte';
 	import Card from '$lib/components/frontpage/Card.svelte';
-	export let projects: any[] = [];
+	import type { Project } from '$lib/modules/types';
+	export let projects: Project[] = [];
 </script>
 
 <div id="projects">
