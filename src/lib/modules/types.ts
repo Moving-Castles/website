@@ -66,7 +66,7 @@ export interface Post {
     playbackId: string | null;
     _rev: string;
     authors: string[];
-    publicationDate?: string;
+    date?: string;
 }
 
 export interface Project {
@@ -80,5 +80,6 @@ export interface Project {
     slug: Slug;
     playbackId: string | null;
     _rev: string;
-    publicationDate?: string;
+    archived: boolean;
+    shortDescription: string;
 }

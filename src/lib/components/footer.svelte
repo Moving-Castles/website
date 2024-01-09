@@ -1,19 +1,21 @@
 <footer>
-	<p>2023 Copyright</p>
-	<div>
-		<a href="/team">Team</a>
-		<a href="/writing">Writing</a>
-		<a href="/team">Network</a>
-		<a href="/contact">Contact</a>
-		<a href="/imprint">Impressum</a>
-	</div>
+	<div>2023 Copyright</div>
+	<a href="/team">Team</a>
+	<a href="/writing">Writing</a>
+	<a href="/team">Network</a>
+	<a href="/contact">Contact</a>
+	<a href="/imprint">Impressum</a>
 </footer>
 
 <style lang="scss">
 	footer {
+		border-top: 1px solid grey;
 		display: flex;
-		text-align: center;
-		flex-direction: column;
 		padding: 40px;
+
+		div,
+		a {
+			margin-right: 10px;
+		}
 	}
 </style>

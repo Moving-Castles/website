@@ -45,8 +45,8 @@
 				background: radial-gradient(circle, red, orangered);
 
 				img {
-					// mix-blend-mode: screen;
-					height: 80%;
+					mix-blend-mode: multiply;
+					height: 70%;
 					animation: bobUpAndDown 2s infinite; /* 1s is the duration, adjust as needed */
 				}
 			}

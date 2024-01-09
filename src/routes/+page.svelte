@@ -7,24 +7,22 @@
 	import Hero2 from '$lib/components/frontpage/Hero2.svelte';
 	export let data;
 	const { about, projects, posts } = data;
-
-	console.log(data);
 </script>
 
-<Hero3 {about} />
+<Hero2 {about} />
 
 <div class="container">
+	<div class="about list">
+		<About {about} />
+	</div>
 	<div class="projects list">
-		<Projects {projects} />
+		<Projects posts={projects} />
 	</div>
 	<div class="writings list">
 		<Posts {posts} />
 	</div>
-	<div class="about list">
-		<About {about} />
-	</div>
+	<Hero2 {about} />
 </div>
-<Hero2 {about} />
 
 <style lang="scss">
 	.frontpage {

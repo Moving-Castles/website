@@ -1,42 +1,38 @@
 <script lang="ts">
 	import SectionHead from '$lib/components/frontpage/SectionHead.svelte';
+	import Button from '$lib/components/Button.svelte';
 	import { renderBlockText } from '$lib/modules/sanity';
 	import type { About } from '$lib/modules/types';
 	export let about: About;
 </script>
 
 <div id="about">
-	<SectionHead>About</SectionHead>
-	{#if about.content}
-		<div class="about">
-			<div class="column left" />
-			<div class="column right">
-				{@html renderBlockText(about.content.content)}
-			</div>
+	<div class="about">
+		<div class="half">
+			{@html renderBlockText(about.content?.content ?? [])}
+			<Button text="Projects" url="#projects" />
+			<Button text="Writing & Resources" url="#writings" />
 		</div>
-	{/if}
+		<div class="half">
+			<Button text="Discord" url="https://github.com/moving-castles" target="_blank" />
+			<Button text="Github" url="https://github.com/moving-castles" target="_blank" />
+			<Button text="Twitter" url="https://github.com/moving-castles" target="_blank" />
+			<Button text="Are.na" url="https://github.com/moving-castles" target="_blank" />
+		</div>
+	</div>
 </div>
 
 <style lang="scss">
 	.about {
 		display: block;
-		height: 50vh;
+		min-height: 50vh;
 		display: flex;
 
-		.column {
+		.half {
 			width: 50%;
-
-			&.left {
-				// background: radial-gradient(circle, red, orangered);
-				// background: var(--background-accent);
-			}
-
-			&.right {
-				display: flex;
-				// justify-content: center;
-				// align-items: center;
-				padding: 20px;
-			}
+			padding: 30px;
+			border-right: 1px solid grey;
+			padding-bottom: 100px;
 		}
 	}
 </style>
