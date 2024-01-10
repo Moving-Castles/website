@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { About } from '$lib/modules/types';
+	import Logo from '$lib/graphics/logo.svelte';
 
 	export let about: About;
 	const scrollToProjects = () => {
@@ -12,6 +13,14 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <header>
+	<div class="topimg slow" data-rellax-speed="20" style="transform: translate3d(0px, -107px, 0px);">
+		<div class="centeredimg">
+			<div class="item">
+				<Logo />
+			</div>
+		</div>
+	</div>
+
 	<div class="column left">
 		<img src="/core.png" alt="Core" />
 	</div>
@@ -27,6 +36,18 @@
 		display: flex;
 		user-select: none;
 		// cursor: pointer;
+
+		.topimg {
+			position: absolute;
+			top: 5%;
+			left: -12%;
+			width: 115%;
+			height: 120%;
+			opacity: 0.4;
+			mix-blend-mode: difference;
+			pointer-events: none;
+			z-index: 1000;
+		}
 
 		.column {
 			display: block;

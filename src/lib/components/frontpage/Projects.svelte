@@ -5,7 +5,7 @@
 
 <div id="projects" class="projects">
 	<div class="introduction">
-		<div class="half">Projects</div>
+		<div class="center">Projects</div>
 	</div>
 	<div class="listing">
 		<div class="listing-header">
@@ -29,12 +29,13 @@
 		.introduction {
 			height: 200px;
 			border-bottom: 1px solid grey;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
-			.half {
-				width: 50%;
-				border-right: 1px solid grey;
-				height: 100%;
+			.center {
 				padding: 30px;
+				font-size: 48px;
 			}
 		}
 
@@ -75,11 +76,11 @@
 			}
 
 			.title {
-				width: 55%;
+				width: 40%;
 			}
 
 			.description {
-				width: 15%;
+				width: 60%;
 			}
 		}
 	}

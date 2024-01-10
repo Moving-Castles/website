@@ -6,7 +6,7 @@
 
 <div id="writings" class="writings">
 	<div class="introduction">
-		<div class="half">Writing & Resources</div>
+		<div class="center">Writing & Resources</div>
 	</div>
 	<div class="listing">
 		<div class="listing-header">
@@ -34,12 +34,13 @@
 		.introduction {
 			height: 200px;
 			border-bottom: 1px solid grey;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
-			.half {
-				width: 50%;
-				border-right: 1px solid grey;
-				height: 100%;
+			.center {
 				padding: 30px;
+				font-size: 48px;
 			}
 		}
 
