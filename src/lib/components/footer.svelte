@@ -1,3 +1,5 @@
+<script lang="ts"></script>
+
 <footer>
 	<div>2023 Copyright</div>
 	<a href="/team">Team</a>
