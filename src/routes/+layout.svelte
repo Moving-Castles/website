@@ -1,6 +1,6 @@
 <script>
 	import '../app.css';
-	import Footer from '$lib/components/Footer.svelte';
+	import Footer from '$lib/components/elements/Footer.svelte';
 </script>
 
 <div class="topimg slow" data-rellax-speed="20" style="transform: translate3d(0px, -107px, 0px);">

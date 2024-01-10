@@ -1,6 +1,5 @@
 <script lang="ts">
-	import SectionHead from '$lib/components/frontpage/SectionHead.svelte';
-	import Button from '$lib/components/Button.svelte';
+	import Button from '$lib/components/elements/Button.svelte';
 	import { renderBlockText } from '$lib/modules/sanity';
 	import type { About } from '$lib/modules/types';
 	export let about: About;

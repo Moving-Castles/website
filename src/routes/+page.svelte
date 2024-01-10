@@ -1,6 +1,5 @@
 <script lang="ts">
 	// import { page } from '$app/stores';
-	import Hero3 from '$lib/components/frontpage/Hero3.svelte';
 	import Projects from '$lib/components/frontpage/Projects.svelte';
 	import Posts from '$lib/components/frontpage/Posts.svelte';
 	import About from '$lib/components/frontpage/About.svelte';
