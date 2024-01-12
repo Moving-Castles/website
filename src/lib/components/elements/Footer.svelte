@@ -1,19 +1,21 @@
 <script lang="ts"></script>
 
 <footer>
-	<div>2023 Copyright</div>
-	<a href="/team">Team</a>
-	<a href="/writing">Writing</a>
-	<a href="/team">Network</a>
-	<a href="/contact">Contact</a>
-	<a href="/imprint">Impressum</a>
+	<div>
+		<a href="/about">About & Contact</a>
+		<a href="/team">Projects</a>
+		<a href="/contact">Writing & Resources</a>
+	</div>
+
+	<div>Copyright 2023</div>
 </footer>
 
 <style lang="scss">
 	footer {
-		border-top: 1px solid grey;
 		display: flex;
-		padding: 40px;
+		padding: 30px 30px;
+		padding-bottom: 80px;
+		justify-content: space-between;
 
 		div,
 		a {

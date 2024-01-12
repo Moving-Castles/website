@@ -10,12 +10,14 @@
 	<div class="listing">
 		<div class="listing-header">
 			<div class="header-cell title">Title</div>
-			<div class="header-cell date">Description</div>
+			<div class="header-cell description">Description</div>
+			<div class="header-cell active">Active</div>
 		</div>
 		{#each posts as post}
 			<a href="/project/{post.slug?.current ?? ''}" class="listing-row">
 				<div class="cell title">{post.title}</div>
 				<div class="cell description">{post.shortDescription ?? ''}</div>
+				<div class="cell active">Yes</div>
 			</a>
 		{/each}
 	</div>
@@ -24,7 +26,6 @@
 <style lang="scss">
 	.projects {
 		width: 100%;
-		border-top: 1px solid grey;
 
 		.introduction {
 			height: 200px;
@@ -62,6 +63,10 @@
 				padding-bottom: 30px;
 				border-bottom: 1px solid grey;
 
+				&:last-child {
+					border-bottom: none;
+				}
+
 				&:hover {
 					background: rgb(62, 62, 62);
 					cursor: pointer;
@@ -80,7 +85,11 @@
 			}
 
 			.description {
-				width: 60%;
+				width: 40%;
+			}
+
+			.active {
+				width: 20%;
 			}
 		}
 	}

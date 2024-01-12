@@ -29,7 +29,6 @@
 <style lang="scss">
 	.writings {
 		width: 100%;
-		border-top: 1px solid grey;
 
 		.introduction {
 			height: 200px;
@@ -66,6 +65,10 @@
 				padding-top: 30px;
 				padding-bottom: 30px;
 				border-bottom: 1px solid grey;
+
+				&:last-child {
+					border-bottom: none;
+				}
 
 				&:hover {
 					background: rgb(62, 62, 62);

@@ -3,36 +3,57 @@
 	import FeaturedMedia from '$lib/components/page/FeaturedMedia.svelte';
 	import Links from '$lib/components/page/Links.svelte';
 	import Media from '$lib/components/page/Media.svelte';
+	import Dots from '$lib/components/elements/Dots.svelte';
 	import { renderBlockText } from '$lib/modules/sanity';
 	import type { Post } from '$lib/modules/types';
 	export let post: Post;
 </script>
 
 <div class="container">
+	<div class="header">
+		<div>{post.date ?? ''}</div>
+		<h1>{post.title}</h1>
+		<h2>{@html renderBlockText(post.byline?.content ?? [])}</h2>
+	</div>
+
+	<Dots />
 	<div class="column">
-		<div>{post.publicationDate ?? ''}</div>
-		<div>{post.title}</div>
-		<div>{@html renderBlockText(post.byline?.content ?? [])}</div>
-		<div class="content">
-			<Content {post} />
-		</div>
-		<div class="links">
-			<Links {post} />
+		<div class="inner">
+			<div class="content">
+				<Content {post} />
+			</div>
+			<div class="links">
+				<Links {post} />
+			</div>
 		</div>
 	</div>
 </div>
+<Dots />
 
 <style lang="scss">
 	.container {
 		display: block;
-		display: flex;
 		background: transparent;
-		padding-top: 100px;
-		justify-content: center;
 		padding-bottom: 200px;
+		width: 100%;
+
+		.header {
+			line-height: 1em;
+			padding: 30px;
+
+			h1,
+			h2 {
+				font-size: 48px;
+			}
+		}
 
 		.column {
-			width: 80ch;
+			justify-content: center;
+			display: flex;
+			width: 100%;
+			.inner {
+				width: 80ch;
+			}
 		}
 	}
 </style>

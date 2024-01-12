@@ -3,18 +3,19 @@
 	import Logo from '$lib/graphics/logo.svelte';
 
 	export let about: About;
-	const scrollToProjects = () => {
-		const projectsEl = document.getElementById('projects');
-		if (!projectsEl) return;
-		projectsEl.scrollIntoView({ behavior: 'smooth' });
+
+	const scrollDown = () => {
+		const targetEl = document.getElementById('tagline');
+		if (!targetEl) return;
+		targetEl.scrollIntoView({ behavior: 'smooth' });
 	};
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
-<header>
+<header on:click={scrollDown}>
 	<div class="topimg slow" data-rellax-speed="20" style="transform: translate3d(0px, -107px, 0px);">
-		<div class="centeredimg">
+		<div class="centered">
 			<div class="item">
 				<Logo />
 			</div>
@@ -35,18 +36,27 @@
 		margin: 0;
 		display: flex;
 		user-select: none;
-		// cursor: pointer;
+		cursor: pointer;
 
 		.topimg {
 			position: absolute;
-			top: 5%;
-			left: -12%;
-			width: 115%;
-			height: 120%;
-			opacity: 0.4;
+			width: 100%;
+			height: 100%;
+			opacity: 0.5;
 			mix-blend-mode: difference;
 			pointer-events: none;
 			z-index: 1000;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			.centered {
+				width: 160vw;
+				height: 140vh;
+				position: relative;
+				top: 17vh;
+				left: -10vw;
+			}
 		}
 
 		.column {

@@ -9,14 +9,14 @@
 	<div class="about">
 		<div class="half">
 			{@html renderBlockText(about.content?.content ?? [])}
-			<Button text="Projects" url="#projects" />
-			<Button text="Writing & Resources" url="#writings" />
+			<Button text="↓ Projects" url="#projects" />
+			<Button text="↓ Writing & Resources" url="#writings" />
 		</div>
 		<div class="half">
-			<Button text="Discord" url="https://github.com/moving-castles" target="_blank" />
-			<Button text="Github" url="https://github.com/moving-castles" target="_blank" />
-			<Button text="Twitter" url="https://github.com/moving-castles" target="_blank" />
-			<Button text="Are.na" url="https://github.com/moving-castles" target="_blank" />
+			<Button text="→ Discord" url="https://github.com/moving-castles" target="_blank" />
+			<Button text="→ Github" url="https://github.com/moving-castles" target="_blank" />
+			<Button text="→ Twitter" url="https://github.com/moving-castles" target="_blank" />
+			<Button text="→ Are.na" url="https://github.com/moving-castles" target="_blank" />
 		</div>
 	</div>
 </div>
