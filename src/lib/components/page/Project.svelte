@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Content from '$lib/components/page/Content.svelte';
+	import Dots from '$lib/components/elements/Dots.svelte';
 	import FeaturedMedia from '$lib/components/page/FeaturedMedia.svelte';
 	import Links from '$lib/components/page/Links.svelte';
 	import Media from '$lib/components/page/Media.svelte';
@@ -24,6 +25,7 @@
 		</div>
 	</div>
 </div>
+<Dots />
 
 <style lang="scss">
 	.container {

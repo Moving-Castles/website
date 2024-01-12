@@ -17,40 +17,18 @@
 <svelte:window on:keydown|esc={close} />
 
 <nav>
-	<Hamburger
-		type="squeeze"
-		--layer-width="30px"
-		--layer-height="2px"
-		--color={open ? 'rgba(10,10,10,1)' : 'rgba(193, 193, 193, 12)'}
-		bind:open
-	/>
+	<a href="/" data-sveltekit-preload-data>Moving Castles</a>
 </nav>
-
-{#if open}
-	<menu in:slide={{ duration: 200 }}>
-		<div class="inner">
-			{#each MENU_ITEMS as item}
-				<div>
-					<a
-						href={item.href}
-						data-sveltekit-noscroll
-						class:underline={$page.url.hash === item.hash}
-					>
-						{item.name}
-					</a>
-				</div>
-			{/each}
-		</div>
-	</menu>
-{/if}
 
 <style lang="scss">
 	nav {
-		position: fixed;
-		top: 10px;
-		right: 10px;
-		z-index: 1000;
-		z-index: var(--hamburger-z);
+		width: 100%;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		padding-left: 30px;
+		padding-right: 30px;
+		border-bottom: 1px solid grey;
 	}
 
 	menu {

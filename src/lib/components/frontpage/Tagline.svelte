@@ -25,6 +25,7 @@
 		.inner {
 			max-width: 40ch;
 			line-height: 1em;
+			// font-family: 'LincolnMITRE-LM5x7';
 		}
 	}
 </style>

@@ -11,9 +11,13 @@
 
 <div class="container">
 	<div class="header">
-		<div>{post.date ?? ''}</div>
-		<h1>{post.title}</h1>
-		<h2>{@html renderBlockText(post.byline?.content ?? [])}</h2>
+		<div class="half">
+			<h1>{post.title}</h1>
+			<h2>{@html renderBlockText(post.byline?.content ?? [])}</h2>
+		</div>
+		<div class="half">
+			<div>{post.date ?? ''}</div>
+		</div>
 	</div>
 
 	<Dots />
@@ -39,20 +43,32 @@
 
 		.header {
 			line-height: 1em;
-			padding: 30px;
+			display: flex;
+			min-height: 300px;
+
+			.half {
+				width: 50%;
+				padding: 30px;
+				border-right: 1px solid grey;
+			}
 
 			h1,
 			h2 {
-				font-size: 48px;
+				font-size: var(--font-size-normal);
+				margin: 0;
 			}
 		}
 
 		.column {
-			justify-content: center;
-			display: flex;
+			// justify-content: center;
+			// display: flex;
 			width: 100%;
+
 			.inner {
-				width: 80ch;
+				padding: 30px;
+				width: 50%;
+				line-height: 1.6em;
+				// font-family: 'Times New Roman', Times, serif;
 			}
 		}
 	}
