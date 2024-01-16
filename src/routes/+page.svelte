@@ -37,6 +37,7 @@
 	.container {
 		display: flex;
 		flex-wrap: wrap;
+
 		.list {
 			width: 100%;
 		}

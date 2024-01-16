@@ -72,11 +72,27 @@ img {
   text-decoration-color: grey;
 }
 
+.content h2 {
+  background: grey;
+  color: var(--black);
+  padding: 1ch;
+  margin-top: 6em;
+}
+
 .content hr {
   border: 1px solid grey;
   margin: 1em 0;
+  height: 0;
+  appearance: none;
+  display: none;
 }
 
 figure {
   margin: 0;
+  text-align: center;
+}
+
+figure img {
+  margin-right: auto;
+  margin-left: auto;
 }
