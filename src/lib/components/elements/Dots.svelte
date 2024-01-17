@@ -8,7 +8,10 @@
 	const drawDotPattern = (el: HTMLDivElement, diameter: number, spacing: number) => {
 		let height = el.clientHeight;
 		let width = el.clientWidth;
-		appendDotPattern(el, generateDotPattern(diameter, spacing, 'grey', width, height, -2));
+		appendDotPattern(
+			el,
+			generateDotPattern(diameter, spacing, 'var(--dark-grey)', width, height, -2)
+		);
 	};
 
 	onMount(() => {

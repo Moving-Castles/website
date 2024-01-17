@@ -29,7 +29,7 @@
 
 <style lang="scss">
 	.video {
-		background: grey;
+		background: var(--dark-grey);
 		width: 720px;
 		max-width: 90%;
 		aspect-ratio: 16/9;

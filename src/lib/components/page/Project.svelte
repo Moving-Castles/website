@@ -66,7 +66,7 @@
 			.half {
 				width: 50%;
 				padding: 30px;
-				border-right: 1px solid grey;
+				border-right: 1px solid var(--dark-grey);
 			}
 
 			h1,
@@ -80,7 +80,7 @@
 			}
 
 			h1 {
-				background: grey;
+				background: var(--dark-grey);
 				color: var(--black);
 				padding: 1ch;
 			}
@@ -94,7 +94,7 @@
 			.media {
 				width: 50%;
 				min-height: 100vh;
-				border-right: 1px solid grey;
+				border-right: 1px solid var(--dark-grey);
 			}
 
 			.text {

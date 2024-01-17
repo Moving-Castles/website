@@ -4,6 +4,13 @@ export type MenuItem = {
     hash: string;
 };
 
+export type Column = {
+    title: string;
+    name: string;
+    key: string;
+    width: string;
+};
+
 type ContentSpan = {
     _type: string;
     marks: string[];

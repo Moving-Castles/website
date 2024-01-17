@@ -71,7 +71,7 @@
 			.half {
 				width: 50%;
 				padding: 30px;
-				border-right: 1px solid grey;
+				border-right: 1px solid var(--dark-grey);
 			}
 
 			h1,
@@ -81,7 +81,7 @@
 			}
 
 			h1 {
-				background: grey;
+				background: var(--dark-grey);
 				color: var(--black);
 				padding: 1ch;
 			}
@@ -95,8 +95,8 @@
 			.text {
 				padding: 50px;
 				width: 90ch;
-				border-right: 1px solid grey;
-				border-left: 1px solid grey;
+				border-right: 1px solid var(--dark-grey);
+				border-left: 1px solid var(--dark-grey);
 				margin-right: auto;
 				margin-left: auto;
 				line-height: 1.8em;

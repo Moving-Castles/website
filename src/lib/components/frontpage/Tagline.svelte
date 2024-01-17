@@ -14,7 +14,7 @@
 		width: 100%;
 		padding-top: 80px;
 		padding-bottom: 80px;
-		border-bottom: 1px solid grey;
+		border-bottom: 1px solid var(--dark-grey);
 		font-size: 48px;
 		margin: 0 auto;
 		text-align: center;

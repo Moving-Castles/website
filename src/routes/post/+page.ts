@@ -1,9 +1,6 @@
-import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
-import { loadData } from "$lib/modules/sanity"
+import { redirect } from '@sveltejs/kit'
 
 export const load = (async ({ params }) => {
-    const posts = await loadData("*[_type == 'post']{..., 'playbackId': featuredVideo.asset->playbackId}", {})
-    if (posts) return { posts };
-    throw error(404, 'Not found');
+    throw redirect(301, "/#writings")
 }) satisfies PageLoad;

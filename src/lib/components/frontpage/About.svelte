@@ -3,20 +3,50 @@
 	import { renderBlockText } from '$lib/modules/sanity';
 	import type { About } from '$lib/modules/types';
 	export let about: About;
+
+	const internalLinks = [
+		{
+			text: '→ Projects',
+			url: '#projects'
+		},
+		{
+			text: '→ Writing & Resources',
+			url: '#writings'
+		}
+	];
+
+	const externalLinks = [
+		{
+			text: '→ Discord',
+			url: 'https://discord.gg/USH976PyXJ'
+		},
+		{
+			text: '→ Github',
+			url: 'https://github.com/moving-castles'
+		},
+		{
+			text: '→ Twitter',
+			url: 'https://twitter.com/movingcastles_'
+		},
+		{
+			text: '→ Are.na',
+			url: 'https://www.are.na/moving-castles'
+		}
+	];
 </script>
 
 <div id="about">
 	<div class="about">
 		<div class="half">
 			{@html renderBlockText(about.content?.content ?? [])}
-			<Button text="↓ Projects" url="#projects" />
-			<Button text="↓ Writing & Resources" url="#writings" />
+			{#each internalLinks as link}
+				<Button text={link.text} url={link.url} anchor />
+			{/each}
 		</div>
 		<div class="half">
-			<Button text="→ Discord" url="https://github.com/moving-castles" target="_blank" />
-			<Button text="→ Github" url="https://github.com/moving-castles" target="_blank" />
-			<Button text="→ Twitter" url="https://github.com/moving-castles" target="_blank" />
-			<Button text="→ Are.na" url="https://github.com/moving-castles" target="_blank" />
+			{#each externalLinks as link}
+				<Button text={link.text} url={link.url} target="_blank" />
+			{/each}
 		</div>
 	</div>
 </div>
@@ -30,7 +60,7 @@
 		.half {
 			width: 50%;
 			padding: 30px;
-			border-right: 1px solid grey;
+			border-right: 1px solid var(--dark-grey);
 			padding-bottom: 100px;
 		}
 	}

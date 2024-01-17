@@ -9,8 +9,6 @@
 	import 'swiper/css';
 	export let post: Post | Project;
 
-	console.log(post.media);
-
 	let swiper: Swiper;
 	let activeIndex = 0;
 
@@ -27,7 +25,6 @@
 	};
 
 	onMount(() => {
-		// disablePageScroll()
 		swiper = new Swiper('.swiper');
 		swiper.on('slideChange', () => {
 			activeIndex = swiper.activeIndex;
@@ -130,8 +127,8 @@
 			position: absolute;
 			bottom: -5%;
 			z-index: 10000;
-			border: 1px solid grey;
-			color: grey;
+			border: 1px solid var(--dark-grey);
+			color: var(--dark-grey);
 			padding: 10px;
 
 			// @include screen-size('phone') {
@@ -148,7 +145,7 @@
 			}
 
 			&:hover {
-				background: grey;
+				background: var(--dark-grey);
 				color: var(--black);
 			}
 

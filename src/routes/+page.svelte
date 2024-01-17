@@ -1,45 +1,47 @@
 <script lang="ts">
 	// import { page } from '$app/stores';
-	import Projects from '$lib/components/frontpage/Projects.svelte';
-	import Posts from '$lib/components/frontpage/Posts.svelte';
+	import Listing from '$lib/components/frontpage/Listing.svelte';
 	import About from '$lib/components/frontpage/About.svelte';
 	import Hero2 from '$lib/components/frontpage/Hero2.svelte';
 	import Hero4 from '$lib/components/frontpage/Hero4.svelte';
 	import Dots from '$lib/components/elements/Dots.svelte';
 	import Tagline from '$lib/components/frontpage/Tagline.svelte';
+	import { PROJECT_COLUMNS, POST_COLUMNS } from '$lib/modules/constants';
 	export let data;
 	const { about, projects, posts } = data;
 </script>
 
-<Hero2 {about} />
-
 <div class="container">
+	<!-- HERO START-->
+	<Hero2 {about} />
+	<!-- ... -->
 	<Dots />
 	<Tagline {about} />
-	<div class="about list">
-		<About {about} />
-	</div>
+	<!-- ABOUT -->
+	<About {about} />
+	<!-- ... -->
 	<Dots />
-	<div class="projects list">
-		<Projects posts={projects} />
-	</div>
+	<!-- PROJECTS -->
+	<Listing
+		title="Projects"
+		id="projects"
+		type="project"
+		columns={PROJECT_COLUMNS}
+		posts={projects}
+	/>
+	<!-- ... -->
 	<Dots />
-
-	<div class="writings list">
-		<Posts {posts} />
-	</div>
+	<!-- WRITINGS & RESOURCES -->
+	<Listing title="Writing & Resources" id="writings" type="post" columns={POST_COLUMNS} {posts} />
+	<!-- ... -->
 	<Dots />
+	<!-- HERO END-->
+	<Hero4 {about} />
 </div>
-
-<Hero4 {about} />
 
 <style lang="scss">
 	.container {
 		display: flex;
 		flex-wrap: wrap;
-
-		.list {
-			width: 100%;
-		}
 	}
 </style>

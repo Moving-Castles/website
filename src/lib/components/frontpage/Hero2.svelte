@@ -23,7 +23,7 @@
 	</div>
 
 	<div class="column left">
-		<img src="/core.png" alt="Core" />
+		<img src="/images/core.png" alt="Core" />
 	</div>
 </header>
 

@@ -3,11 +3,6 @@
 	import Logo from '$lib/graphics/logo.svelte';
 
 	export let about: About;
-	const scrollToProjects = () => {
-		const projectsEl = document.getElementById('projects');
-		if (!projectsEl) return;
-		projectsEl.scrollIntoView({ behavior: 'smooth' });
-	};
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -22,11 +17,11 @@
 	</div>
 
 	<div class="core one">
-		<img src="/core2.png" alt="Core" />
+		<img src="/images/core2.png" alt="Core" />
 	</div>
 
 	<div class="core two">
-		<img src="/core3.png" alt="Core" />
+		<img src="/images/core3.png" alt="Core" />
 	</div>
 </header>
 
