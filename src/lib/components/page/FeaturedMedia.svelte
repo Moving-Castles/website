@@ -3,7 +3,7 @@
 	import { urlFor } from '$lib/modules/sanity';
 	import type { Post, About, Project } from '$lib/modules/types';
 
-	export let post: Post | About | Project;
+	export let post: Post | Project;
 
 	onMount(async () => {
 		await import('@mux/mux-player');

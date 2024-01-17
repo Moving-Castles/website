@@ -8,7 +8,7 @@
 import { createClient } from "@sanity/client"
 import blocksToHtml from "@sanity/block-content-to-html"
 import imageUrlBuilder from "@sanity/image-url"
-import get from "lodash/get.js"
+import { get } from "lodash-es"
 
 import { PUBLIC_SANITY_DATASET, PUBLIC_SANITY_PROJECT_ID } from '$env/static/public';
 

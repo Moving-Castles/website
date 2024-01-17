@@ -1,27 +1,52 @@
 <script lang="ts">
 	import Content from '$lib/components/page/Content.svelte';
 	import Dots from '$lib/components/elements/Dots.svelte';
-	import FeaturedMedia from '$lib/components/page/FeaturedMedia.svelte';
-	import Links from '$lib/components/page/Links.svelte';
 	import Media from '$lib/components/page/Media.svelte';
+	import Links from '$lib/components/page//Links.svelte';
+	import Button from '$lib/components/elements/Button.svelte';
+	import { renderBlockText } from '$lib/modules/sanity';
 	import type { Project } from '$lib/modules/types';
 	export let post: Project;
 </script>
 
 <div class="container">
-	<div class="column left">
-		<FeaturedMedia {post} />
+	<!-- <div class="topimg slow" data-rellax-speed="20" style="transform: translate3d(0px, -107px, 0px);">
+		<div class="centered">
+			<div class="item">
+				<Face />
+			</div>
+		</div>
+	</div> -->
+
+	<div class="header">
+		<div class="half">
+			<h1>{post.title}</h1>
+			<h2>{post.shortDescription ?? ''}</h2>
+		</div>
+		<div class="half">
+			<div>
+				{#if post.githubRepo}
+					<a href={post.githubRepo} target="_blank">→ Github</a>
+				{/if}
+				<Links {post} />
+			</div>
+		</div>
+	</div>
+
+	<Dots />
+	<div class="column-container">
 		<div class="media">
 			<Media {post} />
 		</div>
-	</div>
-	<div class="column right">
-		<div>{post.title}</div>
-		<div class="content">
-			<Content {post} />
-		</div>
-		<div class="links">
-			<Links {post} />
+		<div class="text">
+			<div class="content">
+				<Content {post} />
+			</div>
+			{#if post.arenaChannel}
+				<div class="arena">
+					<Button text="→ Research material" url={post.arenaChannel} />
+				</div>
+			{/if}
 		</div>
 	</div>
 </div>
@@ -30,39 +55,60 @@
 <style lang="scss">
 	.container {
 		display: block;
-		display: flex;
 		background: transparent;
-		padding-top: 100px;
+		width: 100%;
 
-		.column {
-			width: 50%;
+		.header {
+			line-height: 1em;
+			display: flex;
+			min-height: 200px;
 
-			&.left {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-
-				:global(img) {
-					width: 80%;
-					max-height: 80%;
-					object-fit: cover;
-					border-radius: 10px;
-				}
-
-				:global(.video-container) {
-					width: 80%;
-					max-height: 80%;
-					object-fit: cover;
-					// border-radius: 20px;
-					overflow: hidden;
-					pointer-events: none;
-					border-radius: 10px;
-				}
+			.half {
+				width: 50%;
+				padding: 30px;
+				border-right: 1px solid grey;
 			}
 
-			&.right {
-				padding-left: 20px;
-				padding-right: 20px;
+			h1,
+			h2 {
+				font-size: var(--font-size-normal);
+				margin: 0;
+			}
+
+			h2 {
+				margin-top: 1em;
+			}
+
+			h1 {
+				background: grey;
+				color: var(--black);
+				padding: 1ch;
+			}
+		}
+
+		.column-container {
+			// justify-content: center;
+			display: flex;
+			width: 100%;
+
+			.media {
+				width: 50%;
+				min-height: 100vh;
+				border-right: 1px solid grey;
+			}
+
+			.text {
+				padding: 50px;
+				width: 50%;
+				line-height: 1.8em;
+				word-spacing: -0.1em;
+				// font-size: 20px;
+				// font-size: 1.5em;
+				// font-family: 'Times New Roman', Times, serif;
+
+				.content {
+					max-width: 70ch;
+				}
 			}
 		}
 	}

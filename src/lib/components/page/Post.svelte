@@ -1,10 +1,6 @@
 <script lang="ts">
 	import Content from '$lib/components/page/Content.svelte';
-	import FeaturedMedia from '$lib/components/page/FeaturedMedia.svelte';
-	import Links from '$lib/components/page/Links.svelte';
-	import Media from '$lib/components/page/Media.svelte';
 	import Dots from '$lib/components/elements/Dots.svelte';
-	import Face from '$lib/graphics/face.svelte';
 	import { renderBlockText } from '$lib/modules/sanity';
 	import type { Post } from '$lib/modules/types';
 	export let post: Post;

@@ -43,43 +43,50 @@ type Image = {
 export interface About {
     _type: 'about';
     _id: string;
-    title: string;
+    _rev: string;
     _createdAt: string;
     _updatedAt: string;
+    title: string;
     content: ContentEditor;
     tagline: string;
     slug: Slug;
-    _rev: string;
 }
 
 export interface Post {
     _type: 'post';
     _id: string;
-    title: string;
+    _rev: string;
     _createdAt: string;
     _updatedAt: string;
+    title: string;
     content: ContentEditor;
     type: string;
     byline: ContentEditor;
     featuredImage?: Image;
+    media: any[];
     slug: Slug;
     playbackId: string | null;
-    _rev: string;
+    links: any[];
     authors: string[];
     date?: string;
+    arenaChannel: string;
 }
 
 export interface Project {
     _type: 'project';
     _id: string;
-    title: string;
+    _rev: string;
     _createdAt: string;
     _updatedAt: string;
+    title: string;
+    shortDescription: string;
+    active: boolean;
+    githubRepo: string;
+    arenaChannel: string;
     content: ContentEditor;
     featuredImage: Image;
+    media: any[];
+    links: any[];
     slug: Slug;
     playbackId: string | null;
-    _rev: string;
-    archived: boolean;
-    shortDescription: string;
 }

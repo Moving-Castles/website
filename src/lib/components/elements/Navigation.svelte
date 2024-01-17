@@ -17,7 +17,7 @@
 <svelte:window on:keydown|esc={close} />
 
 <nav>
-	<a href="/" data-sveltekit-preload-data>Moving Castles</a>
+	<a href="/" data-sveltekit-preload-data>← Moving Castles</a>
 </nav>
 
 <style lang="scss">
