@@ -52,16 +52,28 @@
 </div>
 
 <style lang="scss">
+	@import '../../styles/responsive.scss';
+
 	.about {
 		display: block;
 		min-height: 50vh;
 		display: flex;
+
+		@include screen-size('small') {
+			flex-wrap: wrap;
+		}
 
 		.half {
 			width: 50%;
 			padding: 30px;
 			border-right: 1px solid var(--dark-grey);
 			padding-bottom: 100px;
+
+			@include screen-size('small') {
+				width: 100%;
+				border-right: none;
+				border-bottom: 1px solid var(--dark-grey);
+			}
 		}
 	}
 </style>

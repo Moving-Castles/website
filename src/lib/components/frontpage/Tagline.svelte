@@ -10,6 +10,8 @@
 </div>
 
 <style lang="scss">
+	@import '../../styles/responsive.scss';
+
 	.tagline {
 		width: 100%;
 		padding-top: 80px;
@@ -21,6 +23,10 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+
+		@include screen-size('small') {
+			font-size: 32px;
+		}
 
 		.inner {
 			max-width: 40ch;

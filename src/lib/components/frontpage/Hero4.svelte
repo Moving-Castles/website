@@ -26,6 +26,8 @@
 </header>
 
 <style lang="scss">
+	@import '../../styles/responsive.scss';
+
 	header {
 		text-align: center;
 		height: 100vh;
@@ -38,6 +40,10 @@
 		// cursor: pointer;
 		background: radial-gradient(circle, red, orangered);
 
+		@include screen-size('small') {
+			height: 80vh;
+		}
+
 		.core {
 			position: absolute;
 
@@ -48,6 +54,11 @@
 					mix-blend-mode: multiply;
 					height: 600px;
 					animation: bobUpAndDown 2s infinite; /* 1s is the duration, adjust as needed */
+
+					@include screen-size('small') {
+						widgth: 100%;
+						height: unset;
+					}
 				}
 			}
 			&.two {
@@ -57,6 +68,11 @@
 					mix-blend-mode: multiply;
 					height: 400px;
 					animation: bobUpAndDown2 2s infinite; /* 1s is the duration, adjust as needed */
+
+					@include screen-size('small') {
+						widgth: 100%;
+						height: unset;
+					}
 				}
 			}
 		}
@@ -79,6 +95,10 @@
 				position: relative;
 				top: 10vh;
 				left: -10vw;
+
+				@include screen-size('small') {
+					top: 40vh;
+				}
 			}
 		}
 	}

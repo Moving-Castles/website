@@ -28,6 +28,8 @@
 </header>
 
 <style lang="scss">
+	@import '../../styles/responsive.scss';
+
 	header {
 		text-align: center;
 		height: 100vh;
@@ -37,6 +39,10 @@
 		display: flex;
 		user-select: none;
 		cursor: pointer;
+
+		@include screen-size('small') {
+			height: 80vh;
+		}
 
 		.topimg {
 			position: absolute;
@@ -56,6 +62,10 @@
 				position: relative;
 				top: 17vh;
 				left: -10vw;
+
+				@include screen-size('small') {
+					top: 40vh;
+				}
 			}
 		}
 
@@ -79,6 +89,11 @@
 					mix-blend-mode: multiply;
 					height: 70%;
 					animation: bobUpAndDown 2s infinite; /* 1s is the duration, adjust as needed */
+
+					@include screen-size('small') {
+						widgth: 100%;
+						height: unset;
+					}
 				}
 			}
 

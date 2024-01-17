@@ -37,6 +37,8 @@
 <Dots />
 
 <style lang="scss">
+	@import '../../styles/responsive.scss';
+
 	.container {
 		display: block;
 		background: transparent;
@@ -68,10 +70,20 @@
 			display: flex;
 			min-height: 200px;
 
+			@include screen-size('small') {
+				flex-wrap: wrap;
+			}
+
 			.half {
 				width: 50%;
 				padding: 30px;
 				border-right: 1px solid var(--dark-grey);
+
+				@include screen-size('small') {
+					width: 100%;
+					border-right: none;
+					border-bottom: 1px solid var(--dark-grey);
+				}
 			}
 
 			h1,
@@ -88,8 +100,6 @@
 		}
 
 		.column-container {
-			// justify-content: center;
-			// display: flex;
 			width: 100%;
 
 			.text {
@@ -101,9 +111,13 @@
 				margin-left: auto;
 				line-height: 1.8em;
 				word-spacing: -0.1em;
-				// font-size: 20px;
-				// font-size: 1.5em;
-				// font-family: 'Times New Roman', Times, serif;
+
+				@include screen-size('small') {
+					width: 100%;
+					border-right: unset;
+					border-left: unset;
+					padding: 30px;
+				}
 
 				.content {
 					// max-width: 70ch;

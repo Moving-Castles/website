@@ -42,6 +42,7 @@
 			.center {
 				padding: 30px;
 				font-size: 48px;
+				line-height: 1em;
 			}
 		}
 

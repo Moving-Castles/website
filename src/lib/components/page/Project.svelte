@@ -53,6 +53,8 @@
 <Dots />
 
 <style lang="scss">
+	@import '../../styles/responsive.scss';
+
 	.container {
 		display: block;
 		background: transparent;
@@ -63,10 +65,20 @@
 			display: flex;
 			min-height: 200px;
 
+			@include screen-size('small') {
+				flex-wrap: wrap;
+			}
+
 			.half {
 				width: 50%;
 				padding: 30px;
 				border-right: 1px solid var(--dark-grey);
+
+				@include screen-size('small') {
+					width: 100%;
+					border-right: none;
+					border-bottom: 1px solid var(--dark-grey);
+				}
 			}
 
 			h1,
@@ -90,11 +102,24 @@
 			// justify-content: center;
 			display: flex;
 			width: 100%;
+			flex-direction: column-reverse;
+
+			@include screen-size('small') {
+				flex-wrap: wrap;
+			}
 
 			.media {
 				width: 50%;
 				min-height: 100vh;
 				border-right: 1px solid var(--dark-grey);
+
+				@include screen-size('small') {
+					width: 100%;
+					border-right: none;
+					border-bottom: 1px solid var(--dark-grey);
+					min-height: unset;
+					padding-bottom: 60px;
+				}
 			}
 
 			.text {
@@ -105,6 +130,11 @@
 				// font-size: 20px;
 				// font-size: 1.5em;
 				// font-family: 'Times New Roman', Times, serif;
+
+				@include screen-size('small') {
+					width: 100%;
+					border-right: none;
+				}
 
 				.content {
 					max-width: 70ch;
