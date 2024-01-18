@@ -1,20 +1,11 @@
 <script lang="ts">
-	import type { About } from '$lib/modules/types';
-	import Logo from '$lib/graphics/logo.svelte';
-
-	export let about: About;
+	import Overlay from '../elements/Overlay.svelte';
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <header>
-	<div class="topimg slow" data-rellax-speed="20" style="transform: translate3d(0px, -107px, 0px);">
-		<div class="centered">
-			<div class="item">
-				<Logo />
-			</div>
-		</div>
-	</div>
+	<Overlay />
 
 	<div class="core one">
 		<img src="/images/core2.png" alt="Core" />
@@ -30,19 +21,18 @@
 
 	header {
 		text-align: center;
-		height: 100vh;
-		width: 100vw;
+		height: 100dvh;
+		width: 100dvw;
 		padding: 0;
 		margin: 0;
 		display: flex;
 		user-select: none;
 		position: relative;
-		// cursor: pointer;
 		background: radial-gradient(circle, red, orangered);
 
-		@include screen-size('small') {
-			height: calc(100dvh - 120px);
-		}
+		// @include screen-size('small') {
+		// 	height: calc(100dvh - 120px);
+		// }
 
 		.core {
 			position: absolute;
@@ -50,14 +40,18 @@
 			&.one {
 				top: 20%;
 				left: 10%;
+
 				img {
 					mix-blend-mode: multiply;
 					height: 600px;
 					animation: bobUpAndDown 2s infinite; /* 1s is the duration, adjust as needed */
 
 					@include screen-size('small') {
-						widgth: 100%;
+						left: 0;
+						top: 0;
+						width: 100%;
 						height: unset;
+						max-height: 70dvh;
 					}
 				}
 			}
@@ -70,34 +64,11 @@
 					animation: bobUpAndDown2 2s infinite; /* 1s is the duration, adjust as needed */
 
 					@include screen-size('small') {
-						widgth: 100%;
+						display: none;
+						width: 100%;
 						height: unset;
+						max-height: 90dvh;
 					}
-				}
-			}
-		}
-
-		.topimg {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			opacity: 0.5;
-			mix-blend-mode: difference;
-			pointer-events: none;
-			z-index: 1000;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-
-			.centered {
-				width: 160%;
-				height: 140%;
-				position: relative;
-				top: 10vh;
-				left: -10vw;
-
-				@include screen-size('small') {
-					top: 40vh;
 				}
 			}
 		}
