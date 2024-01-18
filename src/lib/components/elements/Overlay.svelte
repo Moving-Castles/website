@@ -39,7 +39,7 @@
 		.item {
 			width: 100%;
 			height: 100%;
-			transform: scale(1.2) translateX(-4%) translateY(-6%);
+			transform: scale(1.3) translateX(-2%) translateY(-4%);
 		}
 	}
 </style>
