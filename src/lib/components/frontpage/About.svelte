@@ -75,8 +75,11 @@
 		.half {
 			width: 50%;
 			padding: 30px;
-			border-right: 1px solid var(--dark-grey);
 			padding-bottom: 100px;
+
+			&:first-child {
+				border-right: 1px solid var(--dark-grey);
+			}
 
 			@include screen-size('small') {
 				width: 100%;
