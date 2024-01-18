@@ -52,7 +52,7 @@
 			align-items: center;
 
 			.center {
-				padding: 30px;
+				padding: var(--default-padding);
 				font-size: 48px;
 				line-height: var(--line-height-compressed);
 				text-align: center;
@@ -66,16 +66,16 @@
 				width: 100%;
 				display: flex;
 				border-bottom: 1px solid var(--dark-grey);
-				padding-top: 30px;
-				padding-bottom: 30px;
+				padding-top: var(--default-padding);
+				padding-bottom: var(--default-padding);
 				color: var(--dark-grey);
 			}
 
 			.listing-row {
 				width: 100%;
 				display: flex;
-				padding-top: 30px;
-				padding-bottom: 30px;
+				padding-top: var(--default-padding);
+				padding-bottom: var(--default-padding);
 				border-bottom: 1px solid var(--dark-grey);
 
 				&:last-child {
@@ -96,13 +96,13 @@
 
 			.header-cell:first-child {
 				&:first-child {
-					padding-left: 30px;
+					padding-left: var(--default-padding);
 				}
 			}
 
 			.cell:first-child {
 				&:first-child {
-					padding-left: 30px;
+					padding-left: var(--default-padding);
 				}
 			}
 

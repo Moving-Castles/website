@@ -74,8 +74,8 @@
 
 		.half {
 			width: 50%;
-			padding: 30px;
-			padding-bottom: 100px;
+			padding: var(--default-padding);
+			padding-bottom: var(--double-padding);
 
 			&:first-child {
 				border-right: 1px solid var(--dark-grey);

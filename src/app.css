@@ -18,11 +18,13 @@
   /* Font size */
   --font-size-normal: 16px;
   --line-height-normal: 1.4em;
-  --line-height-text: 1.6em;
+  --line-height-text: 1.7em;
   --line-height-compressed: 1em;
 
   /* Sizing */
-  --default-padding: 10px;
+  --default-padding: 30px;
+  --double-padding: 60px;
+
 
   /* z */
   --hamburger-z: 1001;

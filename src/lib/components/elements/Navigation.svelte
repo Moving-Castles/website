@@ -25,8 +25,8 @@
 		height: 40px;
 		display: flex;
 		align-items: center;
-		padding-left: 30px;
-		padding-right: calc(30px - 1ch);
+		padding-left: var(--default-padding);
+		padding-right: calc(var(--default-padding) - 1ch);
 		border-bottom: 1px solid var(--dark-grey);
 		justify-content: space-between;
 

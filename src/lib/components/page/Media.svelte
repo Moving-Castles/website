@@ -83,7 +83,7 @@
 				height: 100%;
 
 				.swiper-slide {
-					padding: 30px;
+					padding: var(--default-padding);
 					height: 100%;
 					width: 100%;
 					position: relative;

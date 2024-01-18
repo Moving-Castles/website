@@ -14,8 +14,8 @@
 
 	.tagline {
 		width: 100%;
-		padding-top: 80px;
-		padding-bottom: 80px;
+		padding-top: var(--double-padding);
+		padding-bottom: var(--double-padding);
 		border-bottom: 1px solid var(--dark-grey);
 		font-size: 48px;
 		margin: 0 auto;

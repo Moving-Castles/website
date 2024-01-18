@@ -71,7 +71,7 @@
 
 			.half {
 				width: 50%;
-				padding: 30px;
+				padding: var(--default-padding);
 
 				&:first-child {
 					border-right: 1px solid var(--dark-grey);
@@ -123,12 +123,12 @@
 					border-right: none;
 					border-bottom: 1px solid var(--dark-grey);
 					min-height: unset;
-					padding-bottom: 60px;
+					padding-bottom: var(--double-padding);
 				}
 			}
 
 			.text {
-				padding: 50px;
+				padding: var(--default-padding);
 				width: 50%;
 				word-spacing: -0.1em;
 				// font-size: 20px;

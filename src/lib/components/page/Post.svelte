@@ -46,7 +46,7 @@
 
 			.half {
 				width: 50%;
-				padding: 30px;
+				padding: var(--default-padding);
 
 				&:first-child {
 					border-right: 1px solid var(--dark-grey);
@@ -76,7 +76,7 @@
 			width: 100%;
 
 			.text {
-				padding: 50px;
+				padding: var(--double-padding);
 				width: 90ch;
 				border-right: 1px solid var(--dark-grey);
 				border-left: 1px solid var(--dark-grey);
@@ -89,7 +89,7 @@
 					width: 100%;
 					border-right: unset;
 					border-left: unset;
-					padding: 30px;
+					padding: var(--default-padding);
 				}
 			}
 		}

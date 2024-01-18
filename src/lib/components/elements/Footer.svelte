@@ -19,9 +19,9 @@
 <style lang="scss">
 	footer {
 		display: flex;
-		padding: 30px;
-		padding-right: calc(30px - 1ch);
-		padding-bottom: 60px;
+		padding: var(--default-padding);
+		padding-right: calc(var(--default-padding) - 1ch);
+		padding-bottom: var(--double-padding);
 		justify-content: space-between;
 
 		a {

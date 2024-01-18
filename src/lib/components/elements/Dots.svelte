@@ -45,7 +45,6 @@
 		pointer-events: none;
 		overflow: hidden;
 		position: relative;
-		// background: orangered;
 
 		.pattern-container {
 			width: 100%;
@@ -53,8 +52,6 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			// padding-top: 2px;
-			// padding: 10px;
 		}
 
 		// .pattern-container-2 {
