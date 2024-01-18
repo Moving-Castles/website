@@ -41,7 +41,7 @@
 		cursor: pointer;
 
 		@include screen-size('small') {
-			height: calc(100vh - 120px);
+			height: calc(100dvh - 120px);
 		}
 
 		.topimg {
