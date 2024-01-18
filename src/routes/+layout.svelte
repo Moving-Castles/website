@@ -14,9 +14,3 @@
 </main>
 
 <Footer />
-
-<style lang="scss">
-	main {
-		line-height: 1.4em;
-	}
-</style>

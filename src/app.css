@@ -17,6 +17,9 @@
 
   /* Font size */
   --font-size-normal: 16px;
+  --line-height-normal: 1.4em;
+  --line-height-text: 1.6em;
+  --line-height-compressed: 1em;
 
   /* Sizing */
   --default-padding: 10px;
@@ -38,6 +41,7 @@ html {
   color: var(--foreground-color);
   font-family: var(--font-family);
   font-size: var(--font-size-normal);
+  line-height: var(--line-height-normal);
 }
 
 body {

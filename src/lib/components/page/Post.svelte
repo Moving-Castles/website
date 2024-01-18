@@ -7,14 +7,6 @@
 </script>
 
 <div class="container">
-	<!-- <div class="topimg slow" data-rellax-speed="20" style="transform: translate3d(0px, -107px, 0px);">
-		<div class="centered">
-			<div class="item">
-				<Face />
-			</div>
-		</div>
-	</div> -->
-
 	<div class="header">
 		<div class="half">
 			<h1>{post.title}</h1>
@@ -44,29 +36,7 @@
 		background: transparent;
 		width: 100%;
 
-		.topimg {
-			position: absolute;
-			width: 1000px;
-			height: 1000px;
-			opacity: 0.5;
-			mix-blend-mode: difference;
-			pointer-events: none;
-			z-index: 1000;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-
-			.centered {
-				width: 160%;
-				height: 140%;
-				position: relative;
-				top: 10vh;
-				left: -10vw;
-			}
-		}
-
 		.header {
-			line-height: 1em;
 			display: flex;
 			min-height: 200px;
 
@@ -109,7 +79,7 @@
 				border-left: 1px solid var(--dark-grey);
 				margin-right: auto;
 				margin-left: auto;
-				line-height: 1.8em;
+				line-height: var(--line-height-text);
 				word-spacing: -0.1em;
 
 				@include screen-size('small') {
@@ -117,10 +87,6 @@
 					border-right: unset;
 					border-left: unset;
 					padding: 30px;
-				}
-
-				.content {
-					// max-width: 70ch;
 				}
 			}
 		}

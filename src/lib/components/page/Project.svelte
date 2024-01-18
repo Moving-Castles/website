@@ -62,7 +62,6 @@
 		width: 100%;
 
 		.header {
-			line-height: 1em;
 			display: flex;
 			min-height: 200px;
 
@@ -128,7 +127,6 @@
 			.text {
 				padding: 50px;
 				width: 50%;
-				line-height: 1.8em;
 				word-spacing: -0.1em;
 				// font-size: 20px;
 				// font-size: 1.5em;

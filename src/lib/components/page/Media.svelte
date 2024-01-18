@@ -113,7 +113,6 @@
 			font-family: var(--font-family);
 			cursor: pointer;
 			padding: 0;
-			line-height: 1em;
 			color: var(--white);
 		}
 

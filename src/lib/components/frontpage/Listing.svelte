@@ -54,7 +54,8 @@
 			.center {
 				padding: 30px;
 				font-size: 48px;
-				line-height: 1em;
+				line-height: var(--line-height-compressed);
+				text-align: center;
 			}
 		}
 
@@ -65,7 +66,6 @@
 				width: 100%;
 				display: flex;
 				border-bottom: 1px solid var(--dark-grey);
-				line-height: 1em;
 				padding-top: 30px;
 				padding-bottom: 30px;
 				color: var(--dark-grey);
@@ -74,7 +74,6 @@
 			.listing-row {
 				width: 100%;
 				display: flex;
-				line-height: 1em;
 				padding-top: 30px;
 				padding-bottom: 30px;
 				border-bottom: 1px solid var(--dark-grey);

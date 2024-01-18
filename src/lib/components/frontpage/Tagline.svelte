@@ -30,7 +30,7 @@
 
 		.inner {
 			max-width: 40ch;
-			line-height: 1em;
+			line-height: var(--line-height-compressed);
 		}
 	}
 </style>

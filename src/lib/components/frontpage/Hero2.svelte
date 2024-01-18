@@ -101,7 +101,6 @@
 
 				.tag-line {
 					// font-size: 4vw;
-					line-height: 1.1em;
 					word-spacing: -0.2em;
 					width: 20ch;
 					max-width: 90%;
