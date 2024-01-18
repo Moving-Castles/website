@@ -41,7 +41,7 @@
 		background: radial-gradient(circle, red, orangered);
 
 		@include screen-size('small') {
-			height: 80vh;
+			height: calc(100vh - 120px);
 		}
 
 		.core {

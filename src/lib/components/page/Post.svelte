@@ -42,6 +42,7 @@
 
 			@include screen-size('small') {
 				flex-wrap: wrap;
+				min-height: unset;
 			}
 
 			.half {

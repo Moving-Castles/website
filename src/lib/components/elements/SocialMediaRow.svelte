@@ -7,10 +7,10 @@
 </script>
 
 <div class="icons">
-	<a href={SOCIAL_MEDIA['discord']} target="_blank"><Discord /></a>
-	<a href={SOCIAL_MEDIA['github']} target="_blank"><Github /></a>
-	<a href={SOCIAL_MEDIA['twitter']} target="_blank"><Twitter /></a>
-	<a href={SOCIAL_MEDIA['arena']} target="_blank"><Arena /></a>
+	<a href={SOCIAL_MEDIA['discord']} target="_blank"><Discord spaced /></a>
+	<a href={SOCIAL_MEDIA['github']} target="_blank"><Github spaced /></a>
+	<a href={SOCIAL_MEDIA['twitter']} target="_blank"><Twitter spaced /></a>
+	<a href={SOCIAL_MEDIA['arena']} target="_blank"><Arena spaced /></a>
 </div>
 
 <style lang="scss">
