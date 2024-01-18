@@ -39,12 +39,18 @@
 </div>
 
 <style lang="scss">
+	@import '../../styles/responsive.scss';
+
 	.dots {
 		width: 100%;
 		height: 160px;
 		pointer-events: none;
 		overflow: hidden;
 		position: relative;
+
+		@include screen-size('small') {
+			height: 120px;
+		}
 
 		.pattern-container {
 			width: 100%;

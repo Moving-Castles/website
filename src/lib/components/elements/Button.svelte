@@ -38,7 +38,7 @@
 		width: 100%;
 		text-align: center;
 		border-radius: 0;
-		border: 1px solid var(--dark-grey);
+		border: var(--default-border);
 		color: var(--color-white);
 		text-decoration: none;
 		transition: background-color 0.2s ease-in-out;

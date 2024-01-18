@@ -49,13 +49,15 @@
 				padding: var(--default-padding);
 
 				&:first-child {
-					border-right: 1px solid var(--dark-grey);
+					border-right: var(--default-border);
+					@include screen-size('small') {
+						border-right: unset;
+						border-bottom: var(--default-border);
+					}
 				}
 
 				@include screen-size('small') {
 					width: 100%;
-					border-right: none;
-					border-bottom: 1px solid var(--dark-grey);
 				}
 			}
 
@@ -78,8 +80,8 @@
 			.text {
 				padding: var(--double-padding);
 				width: 90ch;
-				border-right: 1px solid var(--dark-grey);
-				border-left: 1px solid var(--dark-grey);
+				border-right: var(--default-border);
+				border-left: var(--default-border);
 				margin-right: auto;
 				margin-left: auto;
 				line-height: var(--line-height-text);

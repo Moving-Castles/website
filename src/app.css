@@ -18,7 +18,7 @@
   /* Font size */
   --font-size-normal: 16px;
   --font-size-large: 48px;
-  --font-size-mobile-large: 32px;
+  --font-size-mobile-large: 28px;
 
   --line-height-normal: 1.4em;
   --line-height-text: 1.7em;
@@ -26,8 +26,10 @@
 
   /* Sizing */
   --default-padding: 30px;
-  --double-padding: 60px;
+  --double-padding: 50px;
 
+  /* Borders */
+  --default-border: 1px solid var(--dark-grey);
 
   /* z */
   --hamburger-z: 1001;
@@ -76,8 +78,11 @@ img {
 }
 
 .content a {
-  text-decoration: underline;
-  text-decoration-color: var(--dark-grey);
+  border-bottom: 1px solid var(--dark-grey);
+}
+
+.content a:hover {
+  border-bottom: 1px solid transparent;
 }
 
 .content h2 {
@@ -88,7 +93,7 @@ img {
 }
 
 .content hr {
-  border: 1px solid var(--dark-grey);
+  border: var(--default-border);
   margin: 1em 0;
   height: 0;
   appearance: none;

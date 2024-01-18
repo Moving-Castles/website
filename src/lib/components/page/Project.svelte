@@ -20,11 +20,11 @@
 	</div> -->
 
 	<div class="header">
-		<div class="half">
+		<div class="half title">
 			<h1>{post.title}</h1>
 			<h2>{post.shortDescription ?? ''}</h2>
 		</div>
-		<div class="half">
+		<div class="half links">
 			<div>
 				{#if post.githubRepo}
 					<a href={post.githubRepo} target="_blank">→ Github</a>
@@ -74,13 +74,22 @@
 				padding: var(--default-padding);
 
 				&:first-child {
-					border-right: 1px solid var(--dark-grey);
+					border-right: var(--default-border);
+					@include screen-size('small') {
+						border-right: unset;
+					}
+				}
+
+				&.links {
+					@include screen-size('small') {
+						display: none;
+					}
 				}
 
 				@include screen-size('small') {
 					width: 100%;
 					border-right: none;
-					border-bottom: 1px solid var(--dark-grey);
+					border-right: unset;
 				}
 			}
 
@@ -116,12 +125,11 @@
 			.media {
 				width: 50%;
 				min-height: 100vh;
-				border-right: 1px solid var(--dark-grey);
+				border-right: var(--default-border);
 
 				@include screen-size('small') {
 					width: 100%;
 					border-right: none;
-					border-bottom: 1px solid var(--dark-grey);
 					min-height: unset;
 					padding-bottom: var(--double-padding);
 				}

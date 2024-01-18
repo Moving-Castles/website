@@ -126,14 +126,9 @@
 			position: absolute;
 			bottom: -5%;
 			z-index: 10000;
-			border: 1px solid var(--dark-grey);
+			border: var(--default-border);
 			color: var(--dark-grey);
 			padding: 10px;
-
-			// @include screen-size('small') {
-			// 	top: unset;
-			// 	bottom: 5vh;
-			// }
 
 			&.left {
 				left: 7%;

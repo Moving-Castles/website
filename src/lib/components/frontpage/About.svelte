@@ -78,13 +78,16 @@
 			padding-bottom: var(--double-padding);
 
 			&:first-child {
-				border-right: 1px solid var(--dark-grey);
+				border-right: var(--default-border);
+				@include screen-size('small') {
+					border-bottom: var(--default-border);
+					border-right: unset;
+				}
 			}
 
 			@include screen-size('small') {
 				width: 100%;
 				border-right: none;
-				border-bottom: 1px solid var(--dark-grey);
 			}
 		}
 	}

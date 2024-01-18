@@ -45,14 +45,14 @@
 		width: 100%;
 
 		.introduction {
-			height: 200px;
-			border-bottom: 1px solid var(--dark-grey);
+			border-bottom: var(--default-border);
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			padding-top: var(--double-padding);
+			padding-bottom: var(--double-padding);
 
 			.center {
-				padding: var(--default-padding);
 				font-size: var(--font-size-large);
 				line-height: var(--line-height-compressed);
 				text-align: center;
@@ -70,7 +70,7 @@
 			.listing-header {
 				width: 100%;
 				display: flex;
-				border-bottom: 1px solid var(--dark-grey);
+				border-bottom: var(--default-border);
 				padding-top: var(--default-padding);
 				padding-bottom: var(--default-padding);
 				color: var(--dark-grey);
@@ -81,7 +81,7 @@
 				display: flex;
 				padding-top: var(--default-padding);
 				padding-bottom: var(--default-padding);
-				border-bottom: 1px solid var(--dark-grey);
+				border-bottom: var(--default-border);
 
 				&:last-child {
 					border-bottom: none;

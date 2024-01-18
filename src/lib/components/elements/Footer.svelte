@@ -5,18 +5,20 @@
 <footer>
 	<div class="menu">
 		<a href="/" data-sveltekit-preload-data>Moving Castles</a>
-		/
-		<a href="/#about" data-sveltekit-preload-data>About & Contact</a>
-		/
-		<a href="/#projects" data-sveltekit-preload-data>Projects</a>
-		/
-		<a href="/#writings" data-sveltekit-preload-data>Writing & Resources</a>
+		<span class="hide-on-mobile">/</span>
+		<a href="/#about" class="hide-on-mobile" data-sveltekit-preload-data>About & Contact</a>
+		<span class="hide-on-mobile">/</span>
+		<a href="/#projects" class="hide-on-mobile" data-sveltekit-preload-data>Projects</a>
+		<span class="hide-on-mobile">/</span>
+		<a href="/#writings" class="hide-on-mobile" data-sveltekit-preload-data>Writing & Resources</a>
 	</div>
 
 	<SocialMediaRow />
 </footer>
 
 <style lang="scss">
+	@import '../../styles/responsive.scss';
+
 	footer {
 		display: flex;
 		padding: var(--default-padding);
@@ -28,6 +30,12 @@
 			&:hover {
 				background: var(--dark-grey);
 				color: var(--black);
+			}
+		}
+
+		.hide-on-mobile {
+			@include screen-size('small') {
+				display: none;
 			}
 		}
 	}
