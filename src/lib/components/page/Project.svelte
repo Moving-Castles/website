@@ -95,6 +95,8 @@
 				background: var(--dark-grey);
 				color: var(--black);
 				padding: 1ch;
+				position: relative;
+				left: -1ch;
 			}
 		}
 
@@ -102,10 +104,10 @@
 			// justify-content: center;
 			display: flex;
 			width: 100%;
-			flex-direction: column-reverse;
 
 			@include screen-size('small') {
 				flex-wrap: wrap;
+				flex-direction: column-reverse;
 			}
 
 			.media {
