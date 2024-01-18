@@ -25,7 +25,6 @@
 		justify-content: space-between;
 
 		a {
-			// margin-right: 10px;
 			&:hover {
 				background: var(--dark-grey);
 				color: var(--black);

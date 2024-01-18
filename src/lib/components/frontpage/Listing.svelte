@@ -84,7 +84,7 @@
 				}
 
 				&:hover {
-					background: rgb(62, 62, 62);
+					background: var(--dark-grey);
 					cursor: pointer;
 				}
 			}

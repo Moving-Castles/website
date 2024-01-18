@@ -80,9 +80,7 @@
 
 			&.left {
 				background: var(--background-color);
-				// background: var(--foreground-color);
 				background: var(--accent-color);
-				// background: radial-gradient(circle, red, rgb(254, 86, 26));
 				background: radial-gradient(circle, red, orangered);
 
 				img {
