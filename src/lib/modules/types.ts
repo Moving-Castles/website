@@ -9,6 +9,7 @@ export type Column = {
     name: string;
     key: string;
     width: string;
+    hideOnMobile: boolean;
 };
 
 type ContentSpan = {

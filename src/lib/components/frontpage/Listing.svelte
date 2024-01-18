@@ -15,13 +15,23 @@
 	<div class="listing">
 		<div class="listing-header">
 			{#each columns as col}
-				<div class="header-cell {col.name}" style={`width: ${col.width}`}>{col.title}</div>
+				<div
+					class="header-cell {col.name} {col.hideOnMobile ? 'hide-on-mobile' : ''}"
+					style={`width: ${col.width}`}
+				>
+					{col.title}
+				</div>
 			{/each}
 		</div>
 		{#each posts as post}
 			<a href={`${type}/${post.slug?.current ?? ''}`} class="listing-row">
 				{#each columns as col}
-					<div class="cell {col.name}" style={`width: ${col.width}`}>{post[col.key] ?? ''}</div>
+					<div
+						class="cell {col.name} {col.hideOnMobile ? 'hide-on-mobile' : ''}"
+						style={`width: ${col.width}`}
+					>
+						{post[col.key] === true ? 'Yes' : post[col.key] === false ? 'No' : post[col.key] ?? ''}
+					</div>
 				{/each}
 			</a>
 		{/each}
@@ -29,6 +39,8 @@
 </div>
 
 <style lang="scss">
+	@import '../../styles/responsive.scss';
+
 	.listing-container {
 		width: 100%;
 
@@ -77,6 +89,12 @@
 				}
 			}
 
+			.hide-on-mobile {
+				@include screen-size('phone') {
+					display: none;
+				}
+			}
+
 			.header-cell:first-child {
 				&:first-child {
 					padding-left: 30px;
@@ -86,6 +104,13 @@
 			.cell:first-child {
 				&:first-child {
 					padding-left: 30px;
+				}
+			}
+
+			.header-cell,
+			.cell {
+				@include screen-size('phone') {
+					width: 50% !important;
 				}
 			}
 		}
