@@ -98,7 +98,7 @@
 						max-height: 100%;
 						max-width: 100%;
 
-						// @include screen-size('phone') {
+						// @include screen-size('small') {
 						// 	max-width: 80%;
 						// }
 					}
@@ -130,7 +130,7 @@
 			color: var(--dark-grey);
 			padding: 10px;
 
-			// @include screen-size('phone') {
+			// @include screen-size('small') {
 			// 	top: unset;
 			// 	bottom: 5vh;
 			// }

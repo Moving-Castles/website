@@ -131,9 +131,6 @@
 				padding: var(--default-padding);
 				width: 50%;
 				word-spacing: -0.1em;
-				// font-size: 20px;
-				// font-size: 1.5em;
-				// font-family: 'Times New Roman', Times, serif;
 
 				@include screen-size('small') {
 					width: 100%;

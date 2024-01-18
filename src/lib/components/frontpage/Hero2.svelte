@@ -96,11 +96,7 @@
 			}
 
 			&.right {
-				// background: var(--accent-color);
-				// color: var(--background-color);
-
 				.tag-line {
-					// font-size: 4vw;
 					word-spacing: -0.2em;
 					width: 20ch;
 					max-width: 90%;

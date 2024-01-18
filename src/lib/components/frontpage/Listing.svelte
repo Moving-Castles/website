@@ -53,9 +53,14 @@
 
 			.center {
 				padding: var(--default-padding);
-				font-size: 48px;
+				font-size: var(--font-size-large);
 				line-height: var(--line-height-compressed);
 				text-align: center;
+				// font-weight: 200;
+
+				@include screen-size('small') {
+					font-size: var(--font-size-mobile-large);
+				}
 			}
 		}
 
@@ -89,7 +94,7 @@
 			}
 
 			.hide-on-mobile {
-				@include screen-size('phone') {
+				@include screen-size('small') {
 					display: none;
 				}
 			}
@@ -108,7 +113,7 @@
 
 			.header-cell,
 			.cell {
-				@include screen-size('phone') {
+				@include screen-size('small') {
 					width: 50% !important;
 				}
 			}
