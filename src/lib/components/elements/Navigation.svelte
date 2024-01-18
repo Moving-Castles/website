@@ -33,6 +33,7 @@
 		padding-right: calc(var(--default-padding) - 1ch);
 		border-bottom: var(--default-border);
 		justify-content: space-between;
+		user-select: none;
 
 		@include screen-size('small') {
 			height: 80px;

@@ -25,6 +25,7 @@
 		padding-right: calc(var(--default-padding) - 1ch);
 		padding-bottom: var(--double-padding);
 		justify-content: space-between;
+		user-select: none;
 
 		a {
 			&:hover {

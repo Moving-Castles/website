@@ -25,6 +25,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		user-select: none;
 
 		@include screen-size('small') {
 			font-size: var(--font-size-mobile-large);

@@ -30,23 +30,24 @@
 		width: 100%;
 		padding-top: 1em;
 		padding-bottom: 1em;
-	}
+		user-select: none;
 
-	.button {
-		display: inline-block;
-		padding: 1rem 1rem;
-		width: 100%;
-		text-align: center;
-		border-radius: 0;
-		border: var(--default-border);
-		color: var(--color-white);
-		text-decoration: none;
-		transition: background-color 0.2s ease-in-out;
-		display: flex;
-		justify-content: center;
-	}
+		.button {
+			display: inline-block;
+			padding: 1rem 1rem;
+			width: 100%;
+			text-align: center;
+			border-radius: 0;
+			border: var(--default-border);
+			color: var(--color-white);
+			text-decoration: none;
+			transition: background-color 0.2s ease-in-out;
+			display: flex;
+			justify-content: center;
 
-	.button:hover {
-		background-color: var(--dark-grey);
+			&:hover {
+				background-color: var(--dark-grey);
+			}
+		}
 	}
 </style>

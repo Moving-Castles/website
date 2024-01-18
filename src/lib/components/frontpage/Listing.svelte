@@ -43,6 +43,7 @@
 
 	.listing-container {
 		width: 100%;
+		user-select: none;
 
 		.introduction {
 			border-bottom: var(--default-border);
