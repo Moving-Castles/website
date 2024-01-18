@@ -5,7 +5,7 @@
 	export let about: About;
 
 	const scrollDown = () => {
-		const targetEl = document.getElementById('tagline');
+		const targetEl = document.getElementById('about');
 		if (!targetEl) return;
 		targetEl.scrollIntoView({ behavior: 'smooth' });
 	};

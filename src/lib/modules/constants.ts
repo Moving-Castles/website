@@ -1,33 +1,5 @@
 import type { Column, MenuItem } from "./types";
 
-export const MENU_ITEMS: MenuItem[] = [
-    {
-        name: 'Home',
-        href: '/',
-        hash: ''
-    },
-    {
-        name: 'Projects',
-        href: '/project',
-        hash: '#projects'
-    },
-    {
-        name: 'Writing',
-        href: '/writing',
-        hash: '#writings'
-    },
-    {
-        name: 'Resources',
-        href: '/resource',
-        hash: '#resources'
-    },
-    {
-        name: 'About',
-        href: '/about',
-        hash: '#about'
-    }
-];
-
 export const PROJECT_COLUMNS: Column[] = [
     {
         title: "Title",
@@ -75,3 +47,12 @@ export const POST_COLUMNS: Column[] = [
         width: '15%'
     }
 ];
+
+export const SOCIAL_MEDIA: {
+    [key: string]: string
+} = {
+    discord: 'https://discord.gg/USH976PyXJ',
+    github: 'https://github.com/moving-castles',
+    twitter: 'https://twitter.com/movingcastles_',
+    arena: 'https://www.are.na/moving-castles'
+};

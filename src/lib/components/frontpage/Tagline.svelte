@@ -3,7 +3,7 @@
 	export let about: About;
 </script>
 
-<div class="tagline" id="tagline">
+<div class="tagline" id="about">
 	<div class="inner">
 		{about.tagline}
 	</div>

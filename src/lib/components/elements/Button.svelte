@@ -1,5 +1,6 @@
 <script lang="ts">
 	export let text: string;
+	export let icon: ConstructorOfATypedSvelteComponent | undefined = undefined;
 	export let url: string;
 	export let target: string = '';
 	export let anchor: boolean = false;
@@ -15,6 +16,9 @@
 
 <div class="button-container">
 	<a href={url} {target} class="button" on:click={handleClick}>
+		{#if icon}
+			<svelte:component this={icon} />
+		{/if}
 		{text}
 	</a>
 </div>
@@ -38,6 +42,8 @@
 		color: var(--color-white);
 		text-decoration: none;
 		transition: background-color 0.2s ease-in-out;
+		display: flex;
+		justify-content: center;
 	}
 
 	.button:hover {

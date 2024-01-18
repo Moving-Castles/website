@@ -1,41 +1,50 @@
 <script lang="ts">
 	import Button from '$lib/components/elements/Button.svelte';
+	import Discord from '$lib/graphics/icons/Discord.svelte';
+	import Github from '$lib/graphics/icons/Github.svelte';
+	import Twitter from '$lib/graphics/icons/Twitter.svelte';
+	import Arena from '$lib/graphics/icons/Arena.svelte';
 	import { renderBlockText } from '$lib/modules/sanity';
 	import type { About } from '$lib/modules/types';
+	import { SOCIAL_MEDIA } from '$lib/modules/constants';
 	export let about: About;
 
 	const internalLinks = [
 		{
-			text: '→ Projects',
+			text: '↓ Projects',
 			url: '#projects'
 		},
 		{
-			text: '→ Writing & Resources',
+			text: '↓ Writing & Resources',
 			url: '#writings'
 		}
 	];
 
 	const externalLinks = [
 		{
-			text: '→ Discord',
-			url: 'https://discord.gg/USH976PyXJ'
+			text: 'Discord',
+			url: SOCIAL_MEDIA['discord'],
+			icon: Discord
 		},
 		{
-			text: '→ Github',
-			url: 'https://github.com/moving-castles'
+			text: 'Github',
+			url: SOCIAL_MEDIA['github'],
+			icon: Github
 		},
 		{
-			text: '→ Twitter',
-			url: 'https://twitter.com/movingcastles_'
+			text: 'Twitter',
+			url: SOCIAL_MEDIA['twitter'],
+			icon: Twitter
 		},
 		{
-			text: '→ Are.na',
-			url: 'https://www.are.na/moving-castles'
+			text: 'Are.na',
+			url: SOCIAL_MEDIA['arena'],
+			icon: Arena
 		}
 	];
 </script>
 
-<div id="about">
+<div>
 	<div class="about">
 		<div class="half">
 			{@html renderBlockText(about.content?.content ?? [])}
@@ -45,7 +54,7 @@
 		</div>
 		<div class="half">
 			{#each externalLinks as link}
-				<Button text={link.text} url={link.url} target="_blank" />
+				<Button icon={link.icon} text={link.text} url={link.url} target="_blank" />
 			{/each}
 		</div>
 	</div>
