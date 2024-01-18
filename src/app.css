@@ -5,6 +5,7 @@
   --blackish: rgba(30,30,30,1);
   --grey: rgba(193, 193, 193, 1);
   --dark-grey: grey;
+  /* --dark-grey: rgb(105, 105, 105); */
   --orange: rgba(255, 69, 0, 1);
   --background-color: var( --black);
   --foreground-color: var(--grey);
@@ -99,7 +100,7 @@ img {
   background: var(--dark-grey);
   color: var(--black);
   padding: 1ch;
-  margin-top: 6em;
+  margin-top: 4em;
 }
 
 .content hr {

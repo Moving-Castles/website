@@ -9,11 +9,14 @@
 <div class="container">
 	<div class="header">
 		<div class="half">
+			{#if post.date}
+				<div class="date">{post.date}</div>
+			{/if}
 			<h1>{post.title}</h1>
 			<h2>{@html renderBlockText(post.byline?.content ?? [])}</h2>
 		</div>
 		<div class="half">
-			<div>{post.date ?? ''}</div>
+			<!-- <div>{post.date ?? ''}</div> -->
 		</div>
 	</div>
 
@@ -72,6 +75,13 @@
 				background: var(--dark-grey);
 				color: var(--black);
 				padding: 1ch;
+				position: relative;
+				left: -1ch;
+			}
+
+			.date {
+				margin-bottom: 1em;
+				color: var(--dark-grey);
 			}
 		}
 

@@ -26,7 +26,7 @@
 
 	nav {
 		width: 100%;
-		height: 40px;
+		height: 60px;
 		display: flex;
 		align-items: center;
 		padding-left: var(--default-padding);
