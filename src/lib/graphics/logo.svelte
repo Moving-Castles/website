@@ -1,9 +1,6 @@
 <script lang="ts">
-	import { draw } from 'svelte/transition';
-	import { quintOut } from 'svelte/easing';
 	import { onMount } from 'svelte';
 
-	let condition = true;
 	let decoEl: SVGSVGElement;
 
 	onMount(() => {

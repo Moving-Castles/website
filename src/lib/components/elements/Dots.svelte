@@ -1,11 +1,14 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { browser } from '$app/environment';
+	import { onDestroy, onMount } from 'svelte';
+	import { throttle } from 'lodash-es';
 	import { generateDotPattern, appendDotPattern } from '$lib/modules/graphics';
 
 	let patternContainer: HTMLDivElement;
 	let patternContainer2: HTMLDivElement;
 
 	const drawDotPattern = (el: HTMLDivElement, diameter: number, spacing: number) => {
+		console.log('drawing');
 		let height = el.clientHeight;
 		let width = el.clientWidth;
 		appendDotPattern(
@@ -14,18 +17,21 @@
 		);
 	};
 
+	const throttledResizeHandler = throttle(() => {
+		drawDotPattern(patternContainer, 6, 5);
+	}, 100);
+
 	onMount(() => {
 		drawDotPattern(patternContainer, 6, 5);
+		window.addEventListener('resize', throttledResizeHandler);
 		// drawDotPattern(patternContainer2, 4, 5);
 	});
-</script>
 
-<window
-	on:resize={() => {
-		drawDotPattern(patternContainer, 4, 5);
-		// drawDotPattern(patternContainer2, 4, 6);
-	}}
-/>
+	onDestroy(() => {
+		if (!browser) return;
+		window.removeEventListener('resize', throttledResizeHandler);
+	});
+</script>
 
 <div class="dots">
 	<div class="pattern-container" bind:this={patternContainer} />
