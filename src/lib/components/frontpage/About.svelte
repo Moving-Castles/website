@@ -2,7 +2,7 @@
 	import Button from '$lib/components/elements/Button.svelte';
 	import Discord from '$lib/graphics/icons/Discord.svelte';
 	import Github from '$lib/graphics/icons/Github.svelte';
-	import Twitter from '$lib/graphics/icons/Twitter.svelte';
+	import X from '$lib/graphics/icons/X.svelte';
 	import Arena from '$lib/graphics/icons/Arena.svelte';
 	import { renderBlockText } from '$lib/modules/sanity';
 	import type { About } from '$lib/modules/types';
@@ -32,9 +32,9 @@
 			icon: Github
 		},
 		{
-			text: 'Twitter',
-			url: SOCIAL_MEDIA['twitter'],
-			icon: Twitter
+			text: '@movingcastles_',
+			url: SOCIAL_MEDIA['x'],
+			icon: X
 		},
 		{
 			text: 'Are.na',

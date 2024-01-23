@@ -61,5 +61,6 @@ export const SOCIAL_MEDIA: {
     discord: 'https://discord.gg/USH976PyXJ',
     github: 'https://github.com/moving-castles',
     twitter: 'https://twitter.com/movingcastles_',
+    x: 'https://x.com/movingcastles_',
     arena: 'https://www.are.na/moving-castles'
 };
