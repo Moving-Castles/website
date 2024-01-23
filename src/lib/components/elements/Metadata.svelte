@@ -8,7 +8,7 @@
 	const DEFAULT_DESCRIPTION =
 		'Moving Castles is a game studio for the tactical research and development of autonomous worlds.';
 	// const DEFAULT_IMAGE = 'https://movingcastles.world/images/logo.png';
-	const DEFAULT_IMAGE = 'https://https://mc-web.netlify.app/images/logo.png';
+	const DEFAULT_IMAGE = 'https://mc-web.netlify.app/images/logo.png';
 	// const BASE_URL = 'https://movingcastles.world';
 	const BASE_URL = 'https://mc-web.netlify.app';
 
