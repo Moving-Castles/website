@@ -7,8 +7,10 @@
 	const BASE_TITLE = 'Moving Castles';
 	const DEFAULT_DESCRIPTION =
 		'Moving Castles is a game studio for the tactical research and development of autonomous worlds.';
-	const DEFAULT_IMAGE = 'https://movingcastles.world/images/logo.png';
-	const BASE_URL = 'https://movingcastles.world';
+	// const DEFAULT_IMAGE = 'https://movingcastles.world/images/logo.png';
+	const DEFAULT_IMAGE = 'https://https://mc-web.netlify.app/images/logo.png';
+	// const BASE_URL = 'https://movingcastles.world';
+	const BASE_URL = 'https://mc-web.netlify.app';
 
 	/**
 	 * Returns the formatted title based on the current language.
@@ -28,7 +30,6 @@
 	 */
 	const getDescription = (p: Post | Project): string => {
 		let d = p.content?.content ? toPlainText(p.content.content) : DEFAULT_DESCRIPTION;
-
 		return truncate(d, {
 			length: 240,
 			separator: /.? +/
