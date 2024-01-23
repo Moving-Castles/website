@@ -7,13 +7,16 @@
 	import Dots from '$lib/components/elements/Dots.svelte';
 	import Tagline from '$lib/components/frontpage/Tagline.svelte';
 	import { PROJECT_COLUMNS, POST_COLUMNS } from '$lib/modules/constants';
+	import Metadata from '$lib/components/elements/Metadata.svelte';
 	export let data;
 	const { about, projects, posts } = data;
 </script>
 
+<Metadata />
+
 <div class="container">
 	<!-- HERO START-->
-	<Hero2 {about} />
+	<Hero2 />
 	<!-- ... -->
 	<Dots />
 	<Tagline {about} />
@@ -36,7 +39,7 @@
 	<!-- ... -->
 	<Dots />
 	<!-- HERO END-->
-	<Hero4 {about} />
+	<Hero4 />
 </div>
 
 <style lang="scss">
