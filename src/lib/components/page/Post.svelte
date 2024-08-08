@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Content from '$lib/components/page/Content.svelte';
 	import Dots from '$lib/components/elements/Dots.svelte';
-	import { renderBlockText } from '$lib/modules/sanity';
-	import type { Post } from '$lib/modules/types';
+	import { renderBlockText } from '$lib/modules/sanity/';
+	import type { Post } from '$lib/types';
 	export let post: Post;
 </script>
 

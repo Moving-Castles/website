@@ -1,12 +1,11 @@
 <script lang="ts">
+	import type { Project } from '$lib/types';
 	import Content from '$lib/components/page/Content.svelte';
 	import Dots from '$lib/components/elements/Dots.svelte';
 	import Media from '$lib/components/page/Media.svelte';
 	import Links from '$lib/components/page//Links.svelte';
 	import Button from '$lib/components/elements/Button.svelte';
-	import { renderBlockText } from '$lib/modules/sanity';
-	import type { Project } from '$lib/modules/types';
-	import Arena from '$lib/graphics/icons/Arena.svelte';
+	import Arena from '$lib/components/graphics/icons/Arena.svelte';
 	export let post: Project;
 </script>
 

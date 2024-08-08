@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { renderBlockText } from '$lib/modules/sanity';
-	import type { Post, About, Project } from '$lib/modules/types';
+	import { renderBlockText } from '$lib/modules/sanity/';
+	import type { Post, About, Project } from '$lib/types';
 	export let post: Post | About | Project;
 </script>
 

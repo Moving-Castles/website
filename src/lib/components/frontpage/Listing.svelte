@@ -1,6 +1,6 @@
 <script lang="ts">
 	import AuthorList from '../elements/AuthorList.svelte';
-	import type { Post, Project, Column } from '$lib/modules/types';
+	import type { Post, Project, Column } from '$lib/types';
 	export let posts: Post[] | Project[] = [];
 	export let columns: Column[];
 	export let id: string;
@@ -30,7 +30,11 @@
 						class="cell {col.name} {col.hideOnMobile ? 'hide-on-mobile' : ''}"
 						style={`width: ${col.width}`}
 					>
-						{post[col.key] === true ? 'Yes' : post[col.key] === false ? 'No' : post[col.key] ?? ''}
+						{post[col.key] === true
+							? 'Yes'
+							: post[col.key] === false
+								? 'No'
+								: (post[col.key] ?? '')}
 					</div>
 				{/each}
 			</a>

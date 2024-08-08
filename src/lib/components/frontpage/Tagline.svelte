@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { About } from '$lib/modules/types';
+	import type { About } from '$lib/types';
 	export let about: About;
 </script>
 

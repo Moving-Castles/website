@@ -1,4 +1,4 @@
-import type { Column, MenuItem } from "./types";
+import type { Column, MenuItem } from "$lib/types";
 
 export const PROJECT_COLUMNS: Column[] = [
     {

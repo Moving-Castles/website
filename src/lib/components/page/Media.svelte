@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { urlFor } from '$lib/modules/sanity';
-	import type { Post, Project } from '$lib/modules/types';
+	import { urlFor } from '$lib/modules/sanity/';
+	import type { Post, Project } from '$lib/types';
 	import EmbedPlayer from '../elements/EmbedPlayer.svelte';
 	import MuxPlayer from '../elements/MuxPlayer.svelte';
 	import Swiper from 'swiper';

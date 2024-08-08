@@ -6,7 +6,7 @@
 	import Hero4 from '$lib/components/frontpage/Hero4.svelte';
 	import Dots from '$lib/components/elements/Dots.svelte';
 	import Tagline from '$lib/components/frontpage/Tagline.svelte';
-	import { PROJECT_COLUMNS, POST_COLUMNS } from '$lib/modules/constants';
+	import { PROJECT_COLUMNS, POST_COLUMNS } from '$lib/constants/index.js';
 	import Metadata from '$lib/components/elements/Metadata.svelte';
 	export let data;
 	const { about, projects, posts } = data;

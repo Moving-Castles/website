@@ -2,7 +2,7 @@
 	import { browser } from '$app/environment';
 	import { onDestroy, onMount } from 'svelte';
 	import { throttle } from 'lodash-es';
-	import { generateDotPattern, appendDotPattern } from '$lib/modules/graphics';
+	import { generateDotPattern, appendDotPattern } from '$lib/modules/graphics/';
 
 	let patternContainer: HTMLDivElement;
 	let patternContainer2: HTMLDivElement;

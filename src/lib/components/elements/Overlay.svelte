@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import Logo from '$lib/graphics/logo.svelte';
+	import Logo from '$lib/components/graphics/logo.svelte';
 
 	let overlayEl: HTMLDivElement;
 

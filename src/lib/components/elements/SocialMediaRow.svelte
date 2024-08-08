@@ -1,9 +1,9 @@
 <script lang="ts">
-	import X from '$lib/graphics/icons/X.svelte';
-	import Github from '$lib/graphics/icons/Github.svelte';
-	import Discord from '$lib/graphics/icons/Discord.svelte';
-	import Arena from '$lib/graphics/icons/Arena.svelte';
-	import { SOCIAL_MEDIA } from '$lib/modules/constants';
+	import { SOCIAL_MEDIA } from '$lib/constants';
+	import X from '$lib/components/graphics/icons/X.svelte';
+	import Github from '$lib/components/graphics/icons/Github.svelte';
+	import Discord from '$lib/components/graphics/icons/Discord.svelte';
+	import Arena from '$lib/components/graphics/icons/Arena.svelte';
 </script>
 
 <div class="icons">

@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { Post, Project } from '$lib/modules/types';
+	import type { Post, Project } from '$lib/types';
 	import { truncate } from 'lodash-es';
-	import { toPlainText, urlFor } from '$lib/modules/sanity';
+	import { toPlainText, urlFor } from '$lib/modules/sanity/';
 	export let post: Post | Project = {} as Post | Project;
 
 	const BASE_TITLE = 'Moving Castles';

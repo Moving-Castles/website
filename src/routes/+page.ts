@@ -1,5 +1,5 @@
-import { loadData } from "$lib/modules/sanity"
-import type { About, Project, Post } from "$lib/modules/types";
+import type { About, Project, Post } from "$lib/types";
+import { loadData } from "$lib/modules/sanity/"
 
 export async function load() {
   const about: About = await loadData("*[_id == 'about'][0]", {})

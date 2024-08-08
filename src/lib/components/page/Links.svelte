@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Post, Project } from '$lib/modules/types';
+	import type { Post, Project } from '$lib/types';
 	export let post: Post | Project;
 </script>
 
