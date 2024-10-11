@@ -45,52 +45,39 @@
 	];
 </script>
 
-<div>
-	<div class="about">
-		<div class="half">
-			{@html renderBlockText(about.content?.content ?? [])}
-			{#each internalLinks as link}
-				<Button text={link.text} url={link.url} anchor />
-			{/each}
+<div id='contact' class='screen'>
+	<div class='inner'>
+		<div class='address'>
+			Moving Castles<br/>
+			Leuschnerdamm 13<br/> 
+			Berlin<br/>
 		</div>
-		<div class="half">
-			{#each externalLinks as link}
-				<Button icon={link.icon} text={link.text} url={link.url} target="_blank" />
-			{/each}
-		</div>
+		<Button  text="info@movingcastles.world" url="@mailto:info@movingcastles.world" target="_blank" />
+		{#each externalLinks as link}
+			<Button icon={link.icon} text={link.text} url={link.url} target="_blank" />
+		{/each}
 	</div>
 </div>
 
 <style lang="scss">
 	@import '../../styles/responsive.scss';
 
-	.about {
+	.screen {
 		display: block;
-		min-height: 50vh;
+		height: 100dvh;
+		width: 100dvw;
 		display: flex;
+		align-items: center;
+		justify-content: center;
 
 		@include screen-size('small') {
 			flex-wrap: wrap;
 			min-height: unset;
 		}
+	}
 
-		.half {
-			width: 50%;
-			padding: var(--default-padding);
-			padding-bottom: var(--double-padding);
-
-			&:first-child {
-				border-right: var(--default-border);
-				@include screen-size('small') {
-					border-bottom: var(--default-border);
-					border-right: unset;
-				}
-			}
-
-			@include screen-size('small') {
-				width: 100%;
-				border-right: none;
-			}
-		}
+	.address {
+		text-align: center;
+		margin-bottom: 1em;
 	}
 </style>

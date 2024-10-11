@@ -28,7 +28,7 @@
 		display: flex;
 		justify-content: center;
 		width: 100%;
-		padding-top: 1em;
+		// padding-top: 1em;
 		padding-bottom: 1em;
 		user-select: none;
 
