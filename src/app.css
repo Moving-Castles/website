@@ -15,6 +15,7 @@
 
   /* Fonts */
   --font-family: 'GT Pressura Mono', helvetica, arial, sans-serif;
+  /* --font-family: 'times new roman', serif; */
 
   /* Font size */
   --font-size-normal: 16px;
@@ -60,6 +61,7 @@ html {
   font-family: var(--font-family);
   font-size: var(--font-size-normal);
   line-height: var(--line-height-normal);
+  scroll-behavior: smooth;
 }
 
 body {

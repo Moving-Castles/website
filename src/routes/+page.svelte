@@ -1,13 +1,12 @@
 <script lang="ts">
-	// import { page } from '$app/stores';
-	import Listing from '$lib/components/frontpage/Listing.svelte';
-	import About from '$lib/components/frontpage/About.svelte';
-	import Hero2 from '$lib/components/frontpage/Hero2.svelte';
-	import Hero4 from '$lib/components/frontpage/Hero4.svelte';
-	import Dots from '$lib/components/elements/Dots.svelte';
-	import Tagline from '$lib/components/frontpage/Tagline.svelte';
-	import { PROJECT_COLUMNS, POST_COLUMNS } from '$lib/constants/index.js';
 	import Metadata from '$lib/components/elements/Metadata.svelte';
+	import ContactScreen from '$lib/components/frontpage/ContactScreen.svelte';
+
+	import LogoScreen from '$lib/components/frontpage/LogoScreen.svelte';
+	import ProjectsScreen from '$lib/components/frontpage/ProjectsScreen.svelte';
+	import TaglineScreen from '$lib/components/frontpage/TaglineScreen.svelte';
+	import WritingsScreen from '$lib/components/frontpage/WritingsScreen.svelte';
+
 	export let data;
 	const { about, projects, posts } = data;
 </script>
@@ -15,31 +14,16 @@
 <Metadata />
 
 <div class="container">
-	<!-- HERO START-->
-	<Hero2 />
-	<!-- ... -->
-	<Dots />
-	<Tagline {about} />
-	<!-- ABOUT -->
-	<About {about} />
-	<!-- ... -->
-	<Dots />
-	<!-- PROJECTS -->
-	<Listing
-		title="Projects"
-		id="projects"
-		type="project"
-		columns={PROJECT_COLUMNS}
-		posts={projects}
-	/>
-	<!-- ... -->
-	<Dots />
-	<!-- WRITINGS & RESOURCES -->
-	<Listing title="Writing & Resources" id="writings" type="post" columns={POST_COLUMNS} {posts} />
-	<!-- ... -->
-	<Dots />
-	<!-- HERO END-->
-	<Hero4 />
+	<!-- SCREEN 1: Logo-->
+	<LogoScreen />
+	<!-- SCREEN 2: Tagline & menu -->
+	<TaglineScreen {about}/>
+	<!-- SCREEN 3: Projects -->
+	<ProjectsScreen {projects}/>
+	<!-- SCREEN 4: Writings -->
+	<WritingsScreen {posts}/>
+	<!-- SCREEN 5: Contact -->
+	<ContactScreen {about} />
 </div>
 
 <style lang="scss">

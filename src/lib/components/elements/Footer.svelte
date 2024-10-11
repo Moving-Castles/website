@@ -3,17 +3,8 @@
 </script>
 
 <footer>
-	<div class="menu">
-		<a href="/" data-sveltekit-preload-data>Moving Castles</a>
-		<span class="hide-on-mobile">/</span>
-		<a href="/#about" class="hide-on-mobile" data-sveltekit-preload-data>About & Contact</a>
-		<span class="hide-on-mobile">/</span>
-		<a href="/#projects" class="hide-on-mobile" data-sveltekit-preload-data>Projects</a>
-		<span class="hide-on-mobile">/</span>
-		<a href="/#writings" class="hide-on-mobile" data-sveltekit-preload-data>Writing & Resources</a>
-	</div>
-
-	<SocialMediaRow />
+	<div class="menu">"Tick tock goes the clock"</div>
+	<div>Moving Castles GmbH 2024</div>
 </footer>
 
 <style lang="scss">
@@ -22,10 +13,11 @@
 	footer {
 		display: flex;
 		padding: var(--default-padding);
-		padding-right: calc(var(--default-padding) - 1ch);
+		padding-right: var(--default-padding);
 		padding-bottom: var(--double-padding);
 		justify-content: space-between;
 		user-select: none;
+		opacity: 0.2;
 
 		a {
 			&:hover {
