@@ -3,7 +3,7 @@
 </script>
 
 <footer>
-	<div class="menu">"Tick tock goes the clock"</div>
+	<div class="menu">“Tick tock goes the clock”</div>
 	<div>Moving Castles GmbH 2024</div>
 </footer>
 

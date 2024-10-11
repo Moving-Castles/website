@@ -33,7 +33,7 @@
 		</div>
 	</div>
 
-	<Dots />
+	<!-- <Dots /> -->
 	<div class="column-container">
 		<div class="media">
 			<Media {post} />
@@ -50,7 +50,7 @@
 		</div>
 	</div>
 </div>
-<Dots />
+<!-- <Dots /> -->
 
 <style lang="scss">
 	@import '../../styles/responsive.scss';

@@ -20,7 +20,7 @@
 		</div>
 	</div>
 
-	<Dots />
+	<!-- <Dots /> -->
 	<div class="column-container">
 		<div class="text">
 			<div class="content">
@@ -29,7 +29,7 @@
 		</div>
 	</div>
 </div>
-<Dots />
+<!-- <Dots /> -->
 
 <style lang="scss">
 	@import '../../styles/responsive.scss';

@@ -34,8 +34,8 @@
 
 		.button {
 			display: inline-block;
-			padding: 1rem 1rem;
-			width: 100%;
+			padding: 0.5rem 1rem;
+			width: auto;
 			text-align: center;
 			border-radius: 0;
 			border: var(--default-border);
